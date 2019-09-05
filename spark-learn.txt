@@ -1,0 +1,7 @@
+INSTALL JUPYTER NOTEBOOK
+  216  jupyter toree install --spark_home=/Users/xyzxxx/spark-2.3.3-bin-hadoop2.6
+  299  python3 -m pip jupyterlab
+  300  python3 -m pip install jupyterlab
+  301  python3 -m pip install jupyter
+  302  jupyter notebook
+  
