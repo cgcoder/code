@@ -5,3 +5,23 @@ INSTALL JUPYTER NOTEBOOK
   301  python3 -m pip install jupyter
   302  jupyter notebook
   
+=== Spark Shell ===
+sc.parallelize(Seq(("Raj", 23, 1), ("Ram", 34, 2), ("Sam", 35, 3)))
+
+// user (name, age, id)
+val rdd1 = Seq(("Gopi", 23, 1), ("Ram", 34, 2), ("Sam", 35, 3))
+// transaction (txn id, cost, user id)
+val rdd2 = sc.parallelize(Seq((1000, 50.0, 1), (1001, 35.0, 1), (2001, 10.0, 3)))
+
+// key by based on what you want to join
+val r1 = rdd1.keyBy(e => e._3)
+// key by based on what you want to join
+val r2 = rdd2.keyBy(e => e._3)
+
+r1.join(r2)
+
+=== Narrow dependency vs Wide dependency ===
+When child partitions depends on one parent partitions (or less partitions)
+example: Map
+When child partitions depends on many partitions
+example: reduceByKey, sort, groupByKey
