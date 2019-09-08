@@ -27,3 +27,14 @@ When child partitions depends on one parent partitions (or less partitions)
 example: Map
 When child partitions depends on many partitions
 example: reduceByKey, sort, groupByKey
+
+=== load csv file ===
+val rdd1 = spark.read.format("csv").option("header", true).load("file:/Users/gochandrasekaran/datadir/avocado.csv")
+# find loaded columns
+rdd1.columns
+#res0: Array[String] = Array(_c0, Date, AveragePrice, Total Volume, 4046, 4225, 4770, Total Bags, Small Bags, Large Bags, XLarge Bags, type, year, region)
+rdd1.select("Date", "AveragePrice").take(5)
+#res1: Array[org.apache.spark.sql.Row] = Array([2015-12-27,1.33], [2015-12-20,1.35], [2015-12-13,0.93], [2015-12-06,1.08], [2015-11-29,1.28])
+rdd1.select(rdd1("Date"), rdd1("AveragePrice")).take(3)
+#res2: Array[org.apache.spark.sql.Row] = Array([2015-12-27,1.33], [2015-12-20,1.35], [2015-12-13,0.93])
+
