@@ -20,6 +20,8 @@ val r2 = rdd2.keyBy(e => e._3)
 
 r1.join(r2)
 
+r1.unpersist // discard rdd right way!
+
 === Narrow dependency vs Wide dependency ===
 When child partitions depends on one parent partitions (or less partitions)
 example: Map
