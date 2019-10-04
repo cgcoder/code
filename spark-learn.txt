@@ -1,0 +1,41 @@
+INSTALL JUPYTER NOTEBOOK
+  216  jupyter toree install --spark_home=/Users/xyzxxx/spark-2.3.3-bin-hadoop2.6
+  299  python3 -m pip jupyterlab
+  300  python3 -m pip install jupyterlab
+  301  python3 -m pip install jupyter
+  302  jupyter notebook
+  
+=== Spark Shell ===
+sc.parallelize(Seq(("Raj", 23, 1), ("Ram", 34, 2), ("Sam", 35, 3)))
+
+// user (name, age, id)
+val rdd1 = Seq(("Gopi", 23, 1), ("Ram", 34, 2), ("Sam", 35, 3))
+// transaction (txn id, cost, user id)
+val rdd2 = sc.parallelize(Seq((1000, 50.0, 1), (1001, 35.0, 1), (2001, 10.0, 3)))
+
+// key by based on what you want to join
+val r1 = rdd1.keyBy(e => e._3)
+// key by based on what you want to join
+val r2 = rdd2.keyBy(e => e._3)
+
+r1.join(r2)
+
+r1.unpersist // discard rdd right way!
+
+=== Narrow dependency vs Wide dependency ===
+When child partitions depends on one parent partitions (or less partitions)
+example: Map
+When child partitions depends on many partitions
+example: reduceByKey, sort, groupByKey
+
+=== load csv file ===
+val df1 = spark.read.format("csv").option("header", true).load("file:/Users/gochandrasekaran/datadir/avocado.csv")
+# find loaded columns
+# .option("inferSchema", true) to infer schema for DF
+df1.columns
+#res0: Array[String] = Array(_c0, Date, AveragePrice, Total Volume, 4046, 4225, 4770, Total Bags, Small Bags, Large Bags, XLarge Bags, type, year, region)
+df1.select("Date", "AveragePrice").take(5)
+#res1: Array[org.apache.spark.sql.Row] = Array([2015-12-27,1.33], [2015-12-20,1.35], [2015-12-13,0.93], [2015-12-06,1.08], [2015-11-29,1.28])
+df1.select(rdd1("Date"), rdd1("AveragePrice")).take(3)
+#res2: Array[org.apache.spark.sql.Row] = Array([2015-12-27,1.33], [2015-12-20,1.35], [2015-12-13,0.93])
+

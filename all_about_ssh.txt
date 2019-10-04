@@ -1,0 +1,10 @@
+=== SSH Stuff ===
+
+==== Login through a jump server ====
+ssh -J <jumpbox> <destination>
+Ex: ssh -J me@jumbox1.home.net me@securebox1.securehome.net
+
+==== Direct a local port (or socket) to a remote port
+
+ssh -o "ServerAliveInterval 120" -N -f -L *:30001:remotehost:remoteport <sshhost>
+

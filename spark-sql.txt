@@ -1,0 +1,6 @@
+== Learning on spark-sql ==
+
+show databases like 'xyz*';
+show tables from <database_name>;
+select count(*) from database_name.table_name;
+
