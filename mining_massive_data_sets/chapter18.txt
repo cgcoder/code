@@ -1,0 +1,4 @@
+Distance Measure:
+----------------
+Jaccard similarity is opposite of distance
+
