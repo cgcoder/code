@@ -2,3 +2,23 @@ Distance Measure:
 ----------------
 Jaccard similarity is opposite of distance
 
+Euclidean Space:
+----------------
+Based on location in "space"
+Non-euclidean, other measure not on location
+
+d is a distance measure function
+1. d(x,y) >= 0
+2. d(x,y) = 0 iff x=
+3. symmetric, d(x,y) = d(y,x);
+4. d(x,y)<=d(x,z)+d(z,y) (triangel inequality)
+5. L2norm - usual distance formula
+6. L1norm - manhattan distance
+7. LrNORM - same as l2, but raised to power r and rth root
+8. Jaccard distance (1-jaccard similarity), cosine distance, edit distance, hamming distance
+
+consider:
+x={1,2,3,4,5} y={1,3,5}
+similarity = 2/5, distance = 1-2/5 = 3/5
+
+edit distance = |x|+|y|-2*LCS(x,y)
