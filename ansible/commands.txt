@@ -1,0 +1,21 @@
+List of useful ansible commands and concept for quick reboot.
+
+---- Machine Prep ---
+(1) from local machine - ssh-keygen
+(2) copy .pub file to remove ~/.ssh/authorized_keys (file mode must be 600)
+
+
+/etc/ansible/hosts - list of configured hosts
+
+# as bruce
+$ ansible all -m ping -u bruce
+# as bruce, sudoing to root (sudo is default method)
+$ ansible all -m ping -u bruce --become
+# as bruce, sudoing to batman
+$ ansible all -m ping -u bruce --become --become-user batman
+
+------ Add user ------
+ansible local-vm -m user -a "name=deployer uid=1001" -u gopi --become --ask-become-pass
+ansible local-vm -m apt -a "name=nginx update_cache=yes" -u gopi --become --ask-become-pass
+ansible local-vm -m apt -a "name=openjdk-8-jdk" -u gopi --become --ask-become-pass
+ansible local-vm -m user -a "name=www-data groups=deployer append=true" -u gopi --become --ask-become-pass
