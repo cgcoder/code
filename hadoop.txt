@@ -1,0 +1,2 @@
+Copy from HDFS to local:
+hadoop fs -copyToLocal <hdfs path> <local path>
