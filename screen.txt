@@ -1,0 +1,10 @@
+sudo apt-get install screen
+
+screen
+
+Ctrl+a S -> Split horizontal
+Ctrl+a | -> vertical
+Ctrl+a Tab -> next screen
+Ctrl+a c -> create
+Ctrl+a " -> list screen
+Ctrl+a X -> exit area
