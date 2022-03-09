@@ -1,0 +1,35 @@
+public class TestUtils {
+
+    public static boolean compare(String str1, String str2) {
+        int i = 0;
+        int j = 0;
+
+        while (i < str1.length() && j < str2.length()) {
+            if (str1.charAt(i) >= '0' && str1.charAt(i) <= '9') {
+                i++;
+                continue;
+            }
+
+            if (str2.charAt(j) >= '0' && str2.charAt(j) <= '9') {
+                j++;
+                continue;
+            }
+
+            if (str1.charAt(i) != str2.charAt(j)) return false;
+            i++;
+            j++;
+        }
+
+        return i >= str1.length() && j >= str2.length();
+    }
+
+    @Test
+    public void testCompare() {
+        System.out.println(compare("abc", "abc")); // true
+        System.out.println(compare("abc", "a1bc")); // true
+        System.out.println(compare("1abc", "abc")); // true
+        System.out.println(compare("bac", "abc")); // false
+        System.out.println(compare("111", "222")); // false
+        System.out.println(compare("111a", "a222")); // true
+    }
+}
