@@ -9,19 +9,22 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
-    'use strict';
+(function () {
+  "use strict";
 
-    function start() {
-         let d = document.getElementById('primary');
-        if (d && document.URL.indexOf('/watch?') <= 0) d.remove();
+  function start() {
+    if (document.URL.indexOf("/results?") >= 0) return;
+    let d = document.getElementById("primary");
+    if (d && document.URL.indexOf("/watch?") <= 0) d.remove();
 
-        let sd = document.getElementById('secondary');
-        if (sd) sd.remove();
+    let sd = document.getElementById("secondary");
+    if (sd) sd.remove();
 
-        let comments = document.getElementById('comments');
-        if (comments) comments.remove();
-    }
+    let comments = document.getElementById("comments");
+    if (comments) comments.remove();
+  }
 
-     var timeout = setInterval( function() { start(); }, 1000);
+  var timeout = setInterval(function () {
+    start();
+  }, 1000);
 })();
