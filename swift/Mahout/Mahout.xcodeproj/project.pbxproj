@@ -1,0 +1,691 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03509E212A87E2E000A11ECC /* MahoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E202A87E2E000A11ECC /* MahoutApp.swift */; };
+		03509E232A87E2E000A11ECC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E222A87E2E000A11ECC /* MainView.swift */; };
+		03509E252A87E2E200A11ECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03509E242A87E2E200A11ECC /* Assets.xcassets */; };
+		03509E282A87E2E200A11ECC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03509E272A87E2E200A11ECC /* Preview Assets.xcassets */; };
+		03509E322A87E2E200A11ECC /* MahoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E312A87E2E200A11ECC /* MahoutTests.swift */; };
+		03509E3C2A87E2E200A11ECC /* MahoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E3B2A87E2E200A11ECC /* MahoutUITests.swift */; };
+		03509E3E2A87E2E200A11ECC /* MahoutUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E3D2A87E2E200A11ECC /* MahoutUITestsLaunchTests.swift */; };
+		03509E502A885B5000A11ECC /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E4F2A885B5000A11ECC /* WorkoutView.swift */; };
+		03509E522A885B5C00A11ECC /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E512A885B5C00A11ECC /* SettingView.swift */; };
+		03509E542A885B7000A11ECC /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E532A885B7000A11ECC /* LogView.swift */; };
+		03509E562A885BA300A11ECC /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E552A885BA300A11ECC /* PlanView.swift */; };
+		03509E5A2A885DD200A11ECC /* Default.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03509E582A885DD200A11ECC /* Default.xcdatamodeld */; };
+		03509EA12A88CF8E00A11ECC /* DailyRoutine+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E932A88CF8E00A11ECC /* DailyRoutine+CoreDataClass.swift */; };
+		03509EA22A88CF8E00A11ECC /* DailyRoutine+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E942A88CF8E00A11ECC /* DailyRoutine+CoreDataProperties.swift */; };
+		03509EA32A88CF8E00A11ECC /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E952A88CF8E00A11ECC /* User+CoreDataClass.swift */; };
+		03509EA42A88CF8E00A11ECC /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E962A88CF8E00A11ECC /* User+CoreDataProperties.swift */; };
+		03509EA52A88CF8E00A11ECC /* Gym+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E972A88CF8E00A11ECC /* Gym+CoreDataClass.swift */; };
+		03509EA62A88CF8E00A11ECC /* Gym+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E982A88CF8E00A11ECC /* Gym+CoreDataProperties.swift */; };
+		03509EA72A88CF8E00A11ECC /* ActivityLogEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E992A88CF8E00A11ECC /* ActivityLogEntry+CoreDataClass.swift */; };
+		03509EA82A88CF8E00A11ECC /* ActivityLogEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E9A2A88CF8E00A11ECC /* ActivityLogEntry+CoreDataProperties.swift */; };
+		03509EA92A88CF8E00A11ECC /* PlanTemplate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E9B2A88CF8E00A11ECC /* PlanTemplate+CoreDataClass.swift */; };
+		03509EAA2A88CF8E00A11ECC /* PlanTemplate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E9C2A88CF8E00A11ECC /* PlanTemplate+CoreDataProperties.swift */; };
+		03509EAB2A88CF8E00A11ECC /* ActivityTypes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E9D2A88CF8E00A11ECC /* ActivityTypes+CoreDataClass.swift */; };
+		03509EAC2A88CF8E00A11ECC /* ActivityTypes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E9E2A88CF8E00A11ECC /* ActivityTypes+CoreDataProperties.swift */; };
+		03509EAD2A88CF8E00A11ECC /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E9F2A88CF8E00A11ECC /* Activity+CoreDataClass.swift */; };
+		03509EAE2A88CF8E00A11ECC /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EA02A88CF8E00A11ECC /* Activity+CoreDataProperties.swift */; };
+		03509EB22A88D2EA00A11ECC /* ManageWorkoutActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EB12A88D2EA00A11ECC /* ManageWorkoutActivitiesView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03509E2E2A87E2E200A11ECC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03509E152A87E2E000A11ECC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03509E1C2A87E2E000A11ECC;
+			remoteInfo = Mahout;
+		};
+		03509E382A87E2E200A11ECC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03509E152A87E2E000A11ECC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03509E1C2A87E2E000A11ECC;
+			remoteInfo = Mahout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03509E1D2A87E2E000A11ECC /* Mahout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mahout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03509E202A87E2E000A11ECC /* MahoutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MahoutApp.swift; sourceTree = "<group>"; };
+		03509E222A87E2E000A11ECC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		03509E242A87E2E200A11ECC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03509E272A87E2E200A11ECC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		03509E2D2A87E2E200A11ECC /* MahoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MahoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03509E312A87E2E200A11ECC /* MahoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MahoutTests.swift; sourceTree = "<group>"; };
+		03509E372A87E2E200A11ECC /* MahoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MahoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03509E3B2A87E2E200A11ECC /* MahoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MahoutUITests.swift; sourceTree = "<group>"; };
+		03509E3D2A87E2E200A11ECC /* MahoutUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MahoutUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		03509E4F2A885B5000A11ECC /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		03509E512A885B5C00A11ECC /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		03509E532A885B7000A11ECC /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
+		03509E552A885BA300A11ECC /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
+		03509E592A885DD200A11ECC /* Default.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Default.xcdatamodel; sourceTree = "<group>"; };
+		03509E932A88CF8E00A11ECC /* DailyRoutine+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyRoutine+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		03509E942A88CF8E00A11ECC /* DailyRoutine+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyRoutine+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		03509E952A88CF8E00A11ECC /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		03509E962A88CF8E00A11ECC /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		03509E972A88CF8E00A11ECC /* Gym+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gym+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		03509E982A88CF8E00A11ECC /* Gym+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gym+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		03509E992A88CF8E00A11ECC /* ActivityLogEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityLogEntry+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		03509E9A2A88CF8E00A11ECC /* ActivityLogEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityLogEntry+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		03509E9B2A88CF8E00A11ECC /* PlanTemplate+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlanTemplate+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		03509E9C2A88CF8E00A11ECC /* PlanTemplate+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlanTemplate+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		03509E9D2A88CF8E00A11ECC /* ActivityTypes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityTypes+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		03509E9E2A88CF8E00A11ECC /* ActivityTypes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityTypes+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		03509E9F2A88CF8E00A11ECC /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		03509EA02A88CF8E00A11ECC /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		03509EB12A88D2EA00A11ECC /* ManageWorkoutActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageWorkoutActivitiesView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03509E1A2A87E2E000A11ECC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03509E2A2A87E2E200A11ECC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03509E342A87E2E200A11ECC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03509E142A87E2E000A11ECC = {
+			isa = PBXGroup;
+			children = (
+				03509E1F2A87E2E000A11ECC /* Mahout */,
+				03509E302A87E2E200A11ECC /* MahoutTests */,
+				03509E3A2A87E2E200A11ECC /* MahoutUITests */,
+				03509E1E2A87E2E000A11ECC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03509E1E2A87E2E000A11ECC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03509E1D2A87E2E000A11ECC /* Mahout.app */,
+				03509E2D2A87E2E200A11ECC /* MahoutTests.xctest */,
+				03509E372A87E2E200A11ECC /* MahoutUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03509E1F2A87E2E000A11ECC /* Mahout */ = {
+			isa = PBXGroup;
+			children = (
+				03509E572A885DB100A11ECC /* Model */,
+				03509E4A2A885AD700A11ECC /* Views */,
+				03509E202A87E2E000A11ECC /* MahoutApp.swift */,
+				03509E222A87E2E000A11ECC /* MainView.swift */,
+				03509E242A87E2E200A11ECC /* Assets.xcassets */,
+				03509E262A87E2E200A11ECC /* Preview Content */,
+			);
+			path = Mahout;
+			sourceTree = "<group>";
+		};
+		03509E262A87E2E200A11ECC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				03509E272A87E2E200A11ECC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		03509E302A87E2E200A11ECC /* MahoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				03509E312A87E2E200A11ECC /* MahoutTests.swift */,
+			);
+			path = MahoutTests;
+			sourceTree = "<group>";
+		};
+		03509E3A2A87E2E200A11ECC /* MahoutUITests */ = {
+			isa = PBXGroup;
+			children = (
+				03509E3B2A87E2E200A11ECC /* MahoutUITests.swift */,
+				03509E3D2A87E2E200A11ECC /* MahoutUITestsLaunchTests.swift */,
+			);
+			path = MahoutUITests;
+			sourceTree = "<group>";
+		};
+		03509E4A2A885AD700A11ECC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03509E4F2A885B5000A11ECC /* WorkoutView.swift */,
+				03509E512A885B5C00A11ECC /* SettingView.swift */,
+				03509E532A885B7000A11ECC /* LogView.swift */,
+				03509E552A885BA300A11ECC /* PlanView.swift */,
+				03509EB12A88D2EA00A11ECC /* ManageWorkoutActivitiesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		03509E572A885DB100A11ECC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03509E932A88CF8E00A11ECC /* DailyRoutine+CoreDataClass.swift */,
+				03509E942A88CF8E00A11ECC /* DailyRoutine+CoreDataProperties.swift */,
+				03509E952A88CF8E00A11ECC /* User+CoreDataClass.swift */,
+				03509E962A88CF8E00A11ECC /* User+CoreDataProperties.swift */,
+				03509E972A88CF8E00A11ECC /* Gym+CoreDataClass.swift */,
+				03509E982A88CF8E00A11ECC /* Gym+CoreDataProperties.swift */,
+				03509E992A88CF8E00A11ECC /* ActivityLogEntry+CoreDataClass.swift */,
+				03509E9A2A88CF8E00A11ECC /* ActivityLogEntry+CoreDataProperties.swift */,
+				03509E9B2A88CF8E00A11ECC /* PlanTemplate+CoreDataClass.swift */,
+				03509E9C2A88CF8E00A11ECC /* PlanTemplate+CoreDataProperties.swift */,
+				03509E9D2A88CF8E00A11ECC /* ActivityTypes+CoreDataClass.swift */,
+				03509E9E2A88CF8E00A11ECC /* ActivityTypes+CoreDataProperties.swift */,
+				03509E9F2A88CF8E00A11ECC /* Activity+CoreDataClass.swift */,
+				03509EA02A88CF8E00A11ECC /* Activity+CoreDataProperties.swift */,
+				03509E582A885DD200A11ECC /* Default.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03509E1C2A87E2E000A11ECC /* Mahout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03509E412A87E2E200A11ECC /* Build configuration list for PBXNativeTarget "Mahout" */;
+			buildPhases = (
+				03509E192A87E2E000A11ECC /* Sources */,
+				03509E1A2A87E2E000A11ECC /* Frameworks */,
+				03509E1B2A87E2E000A11ECC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mahout;
+			productName = Mahout;
+			productReference = 03509E1D2A87E2E000A11ECC /* Mahout.app */;
+			productType = "com.apple.product-type.application";
+		};
+		03509E2C2A87E2E200A11ECC /* MahoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03509E442A87E2E200A11ECC /* Build configuration list for PBXNativeTarget "MahoutTests" */;
+			buildPhases = (
+				03509E292A87E2E200A11ECC /* Sources */,
+				03509E2A2A87E2E200A11ECC /* Frameworks */,
+				03509E2B2A87E2E200A11ECC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03509E2F2A87E2E200A11ECC /* PBXTargetDependency */,
+			);
+			name = MahoutTests;
+			productName = MahoutTests;
+			productReference = 03509E2D2A87E2E200A11ECC /* MahoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		03509E362A87E2E200A11ECC /* MahoutUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03509E472A87E2E200A11ECC /* Build configuration list for PBXNativeTarget "MahoutUITests" */;
+			buildPhases = (
+				03509E332A87E2E200A11ECC /* Sources */,
+				03509E342A87E2E200A11ECC /* Frameworks */,
+				03509E352A87E2E200A11ECC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03509E392A87E2E200A11ECC /* PBXTargetDependency */,
+			);
+			name = MahoutUITests;
+			productName = MahoutUITests;
+			productReference = 03509E372A87E2E200A11ECC /* MahoutUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03509E152A87E2E000A11ECC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					03509E1C2A87E2E000A11ECC = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					03509E2C2A87E2E200A11ECC = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 03509E1C2A87E2E000A11ECC;
+					};
+					03509E362A87E2E200A11ECC = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 03509E1C2A87E2E000A11ECC;
+					};
+				};
+			};
+			buildConfigurationList = 03509E182A87E2E000A11ECC /* Build configuration list for PBXProject "Mahout" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 03509E142A87E2E000A11ECC;
+			productRefGroup = 03509E1E2A87E2E000A11ECC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03509E1C2A87E2E000A11ECC /* Mahout */,
+				03509E2C2A87E2E200A11ECC /* MahoutTests */,
+				03509E362A87E2E200A11ECC /* MahoutUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03509E1B2A87E2E000A11ECC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03509E282A87E2E200A11ECC /* Preview Assets.xcassets in Resources */,
+				03509E252A87E2E200A11ECC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03509E2B2A87E2E200A11ECC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03509E352A87E2E200A11ECC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03509E192A87E2E000A11ECC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03509EA12A88CF8E00A11ECC /* DailyRoutine+CoreDataClass.swift in Sources */,
+				03509E232A87E2E000A11ECC /* MainView.swift in Sources */,
+				03509EB22A88D2EA00A11ECC /* ManageWorkoutActivitiesView.swift in Sources */,
+				03509E522A885B5C00A11ECC /* SettingView.swift in Sources */,
+				03509E502A885B5000A11ECC /* WorkoutView.swift in Sources */,
+				03509EA62A88CF8E00A11ECC /* Gym+CoreDataProperties.swift in Sources */,
+				03509EA32A88CF8E00A11ECC /* User+CoreDataClass.swift in Sources */,
+				03509EA82A88CF8E00A11ECC /* ActivityLogEntry+CoreDataProperties.swift in Sources */,
+				03509E5A2A885DD200A11ECC /* Default.xcdatamodeld in Sources */,
+				03509E542A885B7000A11ECC /* LogView.swift in Sources */,
+				03509EAC2A88CF8E00A11ECC /* ActivityTypes+CoreDataProperties.swift in Sources */,
+				03509EA42A88CF8E00A11ECC /* User+CoreDataProperties.swift in Sources */,
+				03509E212A87E2E000A11ECC /* MahoutApp.swift in Sources */,
+				03509EA72A88CF8E00A11ECC /* ActivityLogEntry+CoreDataClass.swift in Sources */,
+				03509EA92A88CF8E00A11ECC /* PlanTemplate+CoreDataClass.swift in Sources */,
+				03509EAE2A88CF8E00A11ECC /* Activity+CoreDataProperties.swift in Sources */,
+				03509E562A885BA300A11ECC /* PlanView.swift in Sources */,
+				03509EAA2A88CF8E00A11ECC /* PlanTemplate+CoreDataProperties.swift in Sources */,
+				03509EAD2A88CF8E00A11ECC /* Activity+CoreDataClass.swift in Sources */,
+				03509EA22A88CF8E00A11ECC /* DailyRoutine+CoreDataProperties.swift in Sources */,
+				03509EAB2A88CF8E00A11ECC /* ActivityTypes+CoreDataClass.swift in Sources */,
+				03509EA52A88CF8E00A11ECC /* Gym+CoreDataClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03509E292A87E2E200A11ECC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03509E322A87E2E200A11ECC /* MahoutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03509E332A87E2E200A11ECC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03509E3E2A87E2E200A11ECC /* MahoutUITestsLaunchTests.swift in Sources */,
+				03509E3C2A87E2E200A11ECC /* MahoutUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03509E2F2A87E2E200A11ECC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03509E1C2A87E2E000A11ECC /* Mahout */;
+			targetProxy = 03509E2E2A87E2E200A11ECC /* PBXContainerItemProxy */;
+		};
+		03509E392A87E2E200A11ECC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03509E1C2A87E2E000A11ECC /* Mahout */;
+			targetProxy = 03509E382A87E2E200A11ECC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03509E3F2A87E2E200A11ECC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		03509E402A87E2E200A11ECC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		03509E422A87E2E200A11ECC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mahout/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naaram.Mahout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		03509E432A87E2E200A11ECC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mahout/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naaram.Mahout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		03509E452A87E2E200A11ECC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naaram.MahoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mahout.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mahout";
+			};
+			name = Debug;
+		};
+		03509E462A87E2E200A11ECC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naaram.MahoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mahout.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mahout";
+			};
+			name = Release;
+		};
+		03509E482A87E2E200A11ECC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naaram.MahoutUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mahout;
+			};
+			name = Debug;
+		};
+		03509E492A87E2E200A11ECC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naaram.MahoutUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mahout;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03509E182A87E2E000A11ECC /* Build configuration list for PBXProject "Mahout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03509E3F2A87E2E200A11ECC /* Debug */,
+				03509E402A87E2E200A11ECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03509E412A87E2E200A11ECC /* Build configuration list for PBXNativeTarget "Mahout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03509E422A87E2E200A11ECC /* Debug */,
+				03509E432A87E2E200A11ECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03509E442A87E2E200A11ECC /* Build configuration list for PBXNativeTarget "MahoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03509E452A87E2E200A11ECC /* Debug */,
+				03509E462A87E2E200A11ECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03509E472A87E2E200A11ECC /* Build configuration list for PBXNativeTarget "MahoutUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03509E482A87E2E200A11ECC /* Debug */,
+				03509E492A87E2E200A11ECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		03509E582A885DD200A11ECC /* Default.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				03509E592A885DD200A11ECC /* Default.xcdatamodel */,
+			);
+			currentVersion = 03509E592A885DD200A11ECC /* Default.xcdatamodel */;
+			path = Default.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 03509E152A87E2E000A11ECC /* Project object */;
+}
