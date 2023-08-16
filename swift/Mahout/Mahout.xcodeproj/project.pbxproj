@@ -34,6 +34,15 @@
 		03509EAD2A88CF8E00A11ECC /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E9F2A88CF8E00A11ECC /* Activity+CoreDataClass.swift */; };
 		03509EAE2A88CF8E00A11ECC /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EA02A88CF8E00A11ECC /* Activity+CoreDataProperties.swift */; };
 		03509EB22A88D2EA00A11ECC /* ManageWorkoutActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EB12A88D2EA00A11ECC /* ManageWorkoutActivitiesView.swift */; };
+		03509EB42A88DB1C00A11ECC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EB32A88DB1C00A11ECC /* Utils.swift */; };
+		03509EB62A89384E00A11ECC /* AddActivityTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EB52A89384E00A11ECC /* AddActivityTypeView.swift */; };
+		03509EF42A89450F00A11ECC /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EF32A89450F00A11ECC /* PersistenceController.swift */; };
+		03509EF62A89485A00A11ECC /* PersistenceControllerForPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EF52A89485A00A11ECC /* PersistenceControllerForPreview.swift */; };
+		03509EF82A8C071400A11ECC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EF72A8C071400A11ECC /* Extensions.swift */; };
+		03509EFA2A8C0A5300A11ECC /* ErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EF92A8C0A5300A11ECC /* ErrorExtensions.swift */; };
+		03509EFD2A8C204700A11ECC /* AddActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EFC2A8C204700A11ECC /* AddActivityModel.swift */; };
+		03509F002A8C256E00A11ECC /* ActivityImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EFF2A8C256E00A11ECC /* ActivityImagePicker.swift */; };
+		03509F3C2A8C520B00A11ECC /* ActivitySettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509F3B2A8C520B00A11ECC /* ActivitySettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +93,15 @@
 		03509E9F2A88CF8E00A11ECC /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		03509EA02A88CF8E00A11ECC /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		03509EB12A88D2EA00A11ECC /* ManageWorkoutActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageWorkoutActivitiesView.swift; sourceTree = "<group>"; };
+		03509EB32A88DB1C00A11ECC /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		03509EB52A89384E00A11ECC /* AddActivityTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityTypeView.swift; sourceTree = "<group>"; };
+		03509EF32A89450F00A11ECC /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		03509EF52A89485A00A11ECC /* PersistenceControllerForPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceControllerForPreview.swift; sourceTree = "<group>"; };
+		03509EF72A8C071400A11ECC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		03509EF92A8C0A5300A11ECC /* ErrorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtensions.swift; sourceTree = "<group>"; };
+		03509EFC2A8C204700A11ECC /* AddActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityModel.swift; sourceTree = "<group>"; };
+		03509EFF2A8C256E00A11ECC /* ActivityImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityImagePicker.swift; sourceTree = "<group>"; };
+		03509F3B2A8C520B00A11ECC /* ActivitySettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +158,9 @@
 				03509E222A87E2E000A11ECC /* MainView.swift */,
 				03509E242A87E2E200A11ECC /* Assets.xcassets */,
 				03509E262A87E2E200A11ECC /* Preview Content */,
+				03509EF32A89450F00A11ECC /* PersistenceController.swift */,
+				03509EF52A89485A00A11ECC /* PersistenceControllerForPreview.swift */,
+				03509EF92A8C0A5300A11ECC /* ErrorExtensions.swift */,
 			);
 			path = Mahout;
 			sourceTree = "<group>";
@@ -172,11 +193,14 @@
 		03509E4A2A885AD700A11ECC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				03509EFE2A8C253A00A11ECC /* AddActivity */,
+				03509EFB2A8C202E00A11ECC /* ViewModel */,
 				03509E4F2A885B5000A11ECC /* WorkoutView.swift */,
 				03509E512A885B5C00A11ECC /* SettingView.swift */,
 				03509E532A885B7000A11ECC /* LogView.swift */,
 				03509E552A885BA300A11ECC /* PlanView.swift */,
 				03509EB12A88D2EA00A11ECC /* ManageWorkoutActivitiesView.swift */,
+				03509EF72A8C071400A11ECC /* Extensions.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,8 +223,27 @@
 				03509E9F2A88CF8E00A11ECC /* Activity+CoreDataClass.swift */,
 				03509EA02A88CF8E00A11ECC /* Activity+CoreDataProperties.swift */,
 				03509E582A885DD200A11ECC /* Default.xcdatamodeld */,
+				03509EB32A88DB1C00A11ECC /* Utils.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		03509EFB2A8C202E00A11ECC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				03509EFC2A8C204700A11ECC /* AddActivityModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		03509EFE2A8C253A00A11ECC /* AddActivity */ = {
+			isa = PBXGroup;
+			children = (
+				03509EB52A89384E00A11ECC /* AddActivityTypeView.swift */,
+				03509EFF2A8C256E00A11ECC /* ActivityImagePicker.swift */,
+				03509F3B2A8C520B00A11ECC /* ActivitySettingView.swift */,
+			);
+			path = AddActivity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,27 +377,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				03509EA12A88CF8E00A11ECC /* DailyRoutine+CoreDataClass.swift in Sources */,
+				03509EF82A8C071400A11ECC /* Extensions.swift in Sources */,
 				03509E232A87E2E000A11ECC /* MainView.swift in Sources */,
 				03509EB22A88D2EA00A11ECC /* ManageWorkoutActivitiesView.swift in Sources */,
 				03509E522A885B5C00A11ECC /* SettingView.swift in Sources */,
+				03509F3C2A8C520B00A11ECC /* ActivitySettingView.swift in Sources */,
 				03509E502A885B5000A11ECC /* WorkoutView.swift in Sources */,
 				03509EA62A88CF8E00A11ECC /* Gym+CoreDataProperties.swift in Sources */,
 				03509EA32A88CF8E00A11ECC /* User+CoreDataClass.swift in Sources */,
+				03509EB62A89384E00A11ECC /* AddActivityTypeView.swift in Sources */,
 				03509EA82A88CF8E00A11ECC /* ActivityLogEntry+CoreDataProperties.swift in Sources */,
 				03509E5A2A885DD200A11ECC /* Default.xcdatamodeld in Sources */,
 				03509E542A885B7000A11ECC /* LogView.swift in Sources */,
 				03509EAC2A88CF8E00A11ECC /* ActivityTypes+CoreDataProperties.swift in Sources */,
+				03509EFD2A8C204700A11ECC /* AddActivityModel.swift in Sources */,
+				03509F002A8C256E00A11ECC /* ActivityImagePicker.swift in Sources */,
+				03509EF62A89485A00A11ECC /* PersistenceControllerForPreview.swift in Sources */,
 				03509EA42A88CF8E00A11ECC /* User+CoreDataProperties.swift in Sources */,
 				03509E212A87E2E000A11ECC /* MahoutApp.swift in Sources */,
 				03509EA72A88CF8E00A11ECC /* ActivityLogEntry+CoreDataClass.swift in Sources */,
 				03509EA92A88CF8E00A11ECC /* PlanTemplate+CoreDataClass.swift in Sources */,
+				03509EB42A88DB1C00A11ECC /* Utils.swift in Sources */,
 				03509EAE2A88CF8E00A11ECC /* Activity+CoreDataProperties.swift in Sources */,
 				03509E562A885BA300A11ECC /* PlanView.swift in Sources */,
 				03509EAA2A88CF8E00A11ECC /* PlanTemplate+CoreDataProperties.swift in Sources */,
+				03509EFA2A8C0A5300A11ECC /* ErrorExtensions.swift in Sources */,
 				03509EAD2A88CF8E00A11ECC /* Activity+CoreDataClass.swift in Sources */,
 				03509EA22A88CF8E00A11ECC /* DailyRoutine+CoreDataProperties.swift in Sources */,
 				03509EAB2A88CF8E00A11ECC /* ActivityTypes+CoreDataClass.swift in Sources */,
 				03509EA52A88CF8E00A11ECC /* Gym+CoreDataClass.swift in Sources */,
+				03509EF42A89450F00A11ECC /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

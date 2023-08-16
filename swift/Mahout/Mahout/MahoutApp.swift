@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import CoreData
 
 @main
 struct MahoutApp: App {
+    
+    let persistenceController = PersistenceControllerForPreview.previewController1
+    
     var body: some Scene {
         WindowGroup {
-            MainView().navigationTitle("Colors")
+            MainView().environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

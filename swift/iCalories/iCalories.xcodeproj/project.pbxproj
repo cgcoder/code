@@ -14,6 +14,8 @@
 		03509DF62A84C86400A11ECC /* iCaloriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509DF52A84C86400A11ECC /* iCaloriesTests.swift */; };
 		03509E002A84C86400A11ECC /* iCaloriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509DFF2A84C86400A11ECC /* iCaloriesUITests.swift */; };
 		03509E022A84C86400A11ECC /* iCaloriesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E012A84C86400A11ECC /* iCaloriesUITestsLaunchTests.swift */; };
+		03509E112A84C89200A11ECC /* FoodModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03509E0F2A84C89200A11ECC /* FoodModel.xcdatamodeld */; };
+		03509E132A84C94100A11ECC /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509E122A84C94100A11ECC /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		03509DFB2A84C86400A11ECC /* iCaloriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iCaloriesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03509DFF2A84C86400A11ECC /* iCaloriesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCaloriesUITests.swift; sourceTree = "<group>"; };
 		03509E012A84C86400A11ECC /* iCaloriesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCaloriesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		03509E102A84C89200A11ECC /* FoodModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodModel.xcdatamodel; sourceTree = "<group>"; };
+		03509E122A84C94100A11ECC /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		03509DE32A84C86100A11ECC /* iCalories */ = {
 			isa = PBXGroup;
 			children = (
+				03509E0E2A84C87D00A11ECC /* DataModel */,
 				03509DE42A84C86100A11ECC /* iCaloriesApp.swift */,
 				03509DE62A84C86100A11ECC /* ContentView.swift */,
 				03509DE82A84C86300A11ECC /* Assets.xcassets */,
@@ -125,6 +130,15 @@
 				03509E012A84C86400A11ECC /* iCaloriesUITestsLaunchTests.swift */,
 			);
 			path = iCaloriesUITests;
+			sourceTree = "<group>";
+		};
+		03509E0E2A84C87D00A11ECC /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				03509E0F2A84C89200A11ECC /* FoodModel.xcdatamodeld */,
+				03509E122A84C94100A11ECC /* DataController.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				03509DE72A84C86100A11ECC /* ContentView.swift in Sources */,
+				03509E132A84C94100A11ECC /* DataController.swift in Sources */,
 				03509DE52A84C86100A11ECC /* iCaloriesApp.swift in Sources */,
+				03509E112A84C89200A11ECC /* FoodModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +593,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		03509E0F2A84C89200A11ECC /* FoodModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				03509E102A84C89200A11ECC /* FoodModel.xcdatamodel */,
+			);
+			currentVersion = 03509E102A84C89200A11ECC /* FoodModel.xcdatamodel */;
+			path = FoodModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 03509DD92A84C86100A11ECC /* Project object */;
 }

@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct MovieFanApp: App {
+    
+    @StateObject private var dataController = DataController()
+    @State private var name = "test"
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environment(\.managedObjectContext, dataController.container.viewContext)
+            
         }
     }
 }

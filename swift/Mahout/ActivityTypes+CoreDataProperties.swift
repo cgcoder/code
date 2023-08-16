@@ -21,6 +21,7 @@ extension ActivityTypes {
     @NSManaged public var info: String?
     @NSManaged public var image: String?
     @NSManaged public var unit: String?
+    @NSManaged public var imageData: Data?
 
 }
 
