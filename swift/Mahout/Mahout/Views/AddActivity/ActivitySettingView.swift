@@ -8,13 +8,61 @@
 import SwiftUI
 
 struct ActivitySettingView: View {
+    
+    @StateObject var model: AddActivityModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct ActivitySettingView_Previews: PreviewProvider {
-    static var previews: some View {
-        ActivitySettingView()
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Toggle(isOn: $model.isInclinationBased) {
+                    Text("Inclination")
+                }
+            }
+            HStack {
+                Toggle(isOn: $model.isTensionBased) {
+                    Text("Tension")
+                }
+            }
+            HStack {
+                Toggle(isOn: $model.isFrictionBased) {
+                    Text("Friction")
+                }
+            }
+            HStack {
+                Toggle(isOn: $model.isLapBased) {
+                    Text("Laps/Repeats")
+                }
+            }
+            HStack {
+                Toggle(isOn: $model.isKgWeightBased) {
+                    Text("Weight (Kg)")
+                }
+            }
+            HStack {
+                Toggle(isOn: $model.isLBWeightBased) {
+                    Text("Weight (Lb)")
+                }
+            }
+            HStack {
+                Toggle(isOn: $model.isMilesBased) {
+                    Text("Distance (Miles)")
+                }
+            }
+            HStack {
+                Toggle(isOn: $model.isKmBased) {
+                    Text("Distance (KM)")
+                }
+            }
+            HStack {
+                Toggle(isOn: $model.isFloorsBased) {
+                    Text("Floors")
+                }
+            }
+            HStack {
+                Toggle(isOn: $model.isDurationBased) {
+                    Text("Duration (min)")
+                }
+            }
+        }
     }
 }

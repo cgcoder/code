@@ -22,7 +22,7 @@
         <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="info" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="unit" optional="YES" attributeType="String"/>
+        <attribute name="units" optional="YES" attributeType="Transformable" valueTransformerName="ActivityTypeUnitTransformer" customClassName="ActivityTypeUnitValue"/>
     </entity>
     <entity name="DailyRoutine" representedClassName=".DailyRoutine" syncable="YES">
         <attribute name="activities" optional="YES" attributeType="String"/>
@@ -37,6 +37,10 @@
         <attribute name="gymWebsite" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="phone" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="IdGenerator" representedClassName="IdGenerator" syncable="YES" codeGenerationType="class">
+        <attribute name="idName" optional="YES" attributeType="String"/>
+        <attribute name="lastId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="PlanTemplate" representedClassName=".PlanTemplate" syncable="YES">
         <attribute name="days" optional="YES" attributeType="String"/>

@@ -3,18 +3,29 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "ActivityRowView.activityImage.getter:ManageWorkoutActivitiesView.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "activity.image">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "closure #3 in ActivityImagePicker.body.getter:ActivityImagePicker.swift">
       </ContextState>
       <ContextState
          contextName = "closure #1 in closure #4 in closure #5 in closure #1 in AddActivityTypeView.body.getter:AddActivityTypeView.swift">
          <PersistentStrings>
             <PersistentString
                value = "newItem">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AddActivityModel.asDBModel(context:):AddActivityModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "activityType.units">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ActivityRowView.activityImage.getter:ManageWorkoutActivitiesView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "activity.image">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

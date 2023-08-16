@@ -9,18 +9,29 @@ import Foundation
 import SwiftUI
 
 struct AppError: LocalizedError {
-    let rootCause: LocalizedError
+    let rootCause: LocalizedError?
+    var errorDescStr: String? = nil
+    var recoverySuggStr: String? = nil
+    
     var errorDescription: String? {
-        rootCause.errorDescription
+        rootCause?.errorDescription ?? self.errorDescStr ?? "Unknown"
     }
+    
     var recoverySuggestion: String? {
-        rootCause.recoverySuggestion
+        rootCause?.recoverySuggestion ?? self.recoverySuggStr ?? ""
     }
     
     init?(error: Error) {
         guard let err = error as? LocalizedError else { return nil }
         rootCause = err
     }
+    
+    init(err: String, recovery: String? = nil) {
+        self.errorDescStr = err
+        self.recoverySuggStr = recovery
+        self.rootCause = nil
+    }
+    
 }
 
 extension Error {

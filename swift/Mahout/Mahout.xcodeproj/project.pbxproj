@@ -35,7 +35,7 @@
 		03509EAE2A88CF8E00A11ECC /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EA02A88CF8E00A11ECC /* Activity+CoreDataProperties.swift */; };
 		03509EB22A88D2EA00A11ECC /* ManageWorkoutActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EB12A88D2EA00A11ECC /* ManageWorkoutActivitiesView.swift */; };
 		03509EB42A88DB1C00A11ECC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EB32A88DB1C00A11ECC /* Utils.swift */; };
-		03509EB62A89384E00A11ECC /* AddActivityTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EB52A89384E00A11ECC /* AddActivityTypeView.swift */; };
+		03509EB62A89384E00A11ECC /* ManageActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EB52A89384E00A11ECC /* ManageActivityType.swift */; };
 		03509EF42A89450F00A11ECC /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EF32A89450F00A11ECC /* PersistenceController.swift */; };
 		03509EF62A89485A00A11ECC /* PersistenceControllerForPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EF52A89485A00A11ECC /* PersistenceControllerForPreview.swift */; };
 		03509EF82A8C071400A11ECC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EF72A8C071400A11ECC /* Extensions.swift */; };
@@ -43,6 +43,8 @@
 		03509EFD2A8C204700A11ECC /* AddActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EFC2A8C204700A11ECC /* AddActivityModel.swift */; };
 		03509F002A8C256E00A11ECC /* ActivityImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509EFF2A8C256E00A11ECC /* ActivityImagePicker.swift */; };
 		03509F3C2A8C520B00A11ECC /* ActivitySettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509F3B2A8C520B00A11ECC /* ActivitySettingView.swift */; };
+		03509F3F2A8D52CB00A11ECC /* ActivityTypeUnitTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509F3E2A8D52CB00A11ECC /* ActivityTypeUnitTransformer.swift */; };
+		03509F412A8D537C00A11ECC /* ActivityTypeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03509F402A8D537C00A11ECC /* ActivityTypeUnit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +96,7 @@
 		03509EA02A88CF8E00A11ECC /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		03509EB12A88D2EA00A11ECC /* ManageWorkoutActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageWorkoutActivitiesView.swift; sourceTree = "<group>"; };
 		03509EB32A88DB1C00A11ECC /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		03509EB52A89384E00A11ECC /* AddActivityTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityTypeView.swift; sourceTree = "<group>"; };
+		03509EB52A89384E00A11ECC /* ManageActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageActivityType.swift; sourceTree = "<group>"; };
 		03509EF32A89450F00A11ECC /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		03509EF52A89485A00A11ECC /* PersistenceControllerForPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceControllerForPreview.swift; sourceTree = "<group>"; };
 		03509EF72A8C071400A11ECC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -102,6 +104,8 @@
 		03509EFC2A8C204700A11ECC /* AddActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityModel.swift; sourceTree = "<group>"; };
 		03509EFF2A8C256E00A11ECC /* ActivityImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityImagePicker.swift; sourceTree = "<group>"; };
 		03509F3B2A8C520B00A11ECC /* ActivitySettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySettingView.swift; sourceTree = "<group>"; };
+		03509F3E2A8D52CB00A11ECC /* ActivityTypeUnitTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeUnitTransformer.swift; sourceTree = "<group>"; };
+		03509F402A8D537C00A11ECC /* ActivityTypeUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeUnit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +212,7 @@
 		03509E572A885DB100A11ECC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				03509F3D2A8D52B300A11ECC /* Transformers */,
 				03509E932A88CF8E00A11ECC /* DailyRoutine+CoreDataClass.swift */,
 				03509E942A88CF8E00A11ECC /* DailyRoutine+CoreDataProperties.swift */,
 				03509E952A88CF8E00A11ECC /* User+CoreDataClass.swift */,
@@ -224,6 +229,7 @@
 				03509EA02A88CF8E00A11ECC /* Activity+CoreDataProperties.swift */,
 				03509E582A885DD200A11ECC /* Default.xcdatamodeld */,
 				03509EB32A88DB1C00A11ECC /* Utils.swift */,
+				03509F402A8D537C00A11ECC /* ActivityTypeUnit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,11 +245,19 @@
 		03509EFE2A8C253A00A11ECC /* AddActivity */ = {
 			isa = PBXGroup;
 			children = (
-				03509EB52A89384E00A11ECC /* AddActivityTypeView.swift */,
+				03509EB52A89384E00A11ECC /* ManageActivityType.swift */,
 				03509EFF2A8C256E00A11ECC /* ActivityImagePicker.swift */,
 				03509F3B2A8C520B00A11ECC /* ActivitySettingView.swift */,
 			);
 			path = AddActivity;
+			sourceTree = "<group>";
+		};
+		03509F3D2A8D52B300A11ECC /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				03509F3E2A8D52CB00A11ECC /* ActivityTypeUnitTransformer.swift */,
+			);
+			path = Transformers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,8 +399,9 @@
 				03509E502A885B5000A11ECC /* WorkoutView.swift in Sources */,
 				03509EA62A88CF8E00A11ECC /* Gym+CoreDataProperties.swift in Sources */,
 				03509EA32A88CF8E00A11ECC /* User+CoreDataClass.swift in Sources */,
-				03509EB62A89384E00A11ECC /* AddActivityTypeView.swift in Sources */,
+				03509EB62A89384E00A11ECC /* ManageActivityType.swift in Sources */,
 				03509EA82A88CF8E00A11ECC /* ActivityLogEntry+CoreDataProperties.swift in Sources */,
+				03509F412A8D537C00A11ECC /* ActivityTypeUnit.swift in Sources */,
 				03509E5A2A885DD200A11ECC /* Default.xcdatamodeld in Sources */,
 				03509E542A885B7000A11ECC /* LogView.swift in Sources */,
 				03509EAC2A88CF8E00A11ECC /* ActivityTypes+CoreDataProperties.swift in Sources */,
@@ -402,6 +417,7 @@
 				03509E562A885BA300A11ECC /* PlanView.swift in Sources */,
 				03509EAA2A88CF8E00A11ECC /* PlanTemplate+CoreDataProperties.swift in Sources */,
 				03509EFA2A8C0A5300A11ECC /* ErrorExtensions.swift in Sources */,
+				03509F3F2A8D52CB00A11ECC /* ActivityTypeUnitTransformer.swift in Sources */,
 				03509EAD2A88CF8E00A11ECC /* Activity+CoreDataClass.swift in Sources */,
 				03509EA22A88CF8E00A11ECC /* DailyRoutine+CoreDataProperties.swift in Sources */,
 				03509EAB2A88CF8E00A11ECC /* ActivityTypes+CoreDataClass.swift in Sources */,

@@ -11,7 +11,7 @@ import PhotosUI
 struct ActivityImagePicker: View {
     @StateObject var model: AddActivityModel
     
-    let predefinedImages = ["noimage", "treadmill", "elliptical", "rowing"]
+    let predefinedImages = ["noimage", "treadmill", "elliptical", "rowing", "walk"]
     
     var body: some View {
         HStack {
@@ -36,8 +36,9 @@ struct ActivityImagePicker: View {
                 }.onChange(of: $model.selectedPictureItem.wrappedValue) { newItem in
                     Task {
                         do {
-                            let data = try await newItem!.loadTransferable(type: Data.self)
-                            $model.selectedImage.wrappedValue = (UIImage(data: data!)!)
+                            let data: Data = try await newItem!.loadTransferable(type: Data.self)!
+                            $model.selectedImageData.wrappedValue = data
+                            $model.selectedImage.wrappedValue = (UIImage(data: data)!)
                         } catch {
                             $model.selectedImage.wrappedValue = (UIImage())
                             $model.error.wrappedValue = error

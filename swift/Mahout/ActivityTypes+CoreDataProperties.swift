@@ -2,7 +2,7 @@
 //  ActivityTypes+CoreDataProperties.swift
 //  Mahout
 //
-//  Created by Chandrasekaran, Gopinath on 8/13/23.
+//  Created by Chandrasekaran, Gopinath on 8/16/23.
 //
 //
 
@@ -20,7 +20,7 @@ extension ActivityTypes {
     @NSManaged public var name: String?
     @NSManaged public var info: String?
     @NSManaged public var image: String?
-    @NSManaged public var unit: String?
+    @NSManaged public var units: ActivityTypeUnitValue?
     @NSManaged public var imageData: Data?
 
 }

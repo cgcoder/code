@@ -13,6 +13,10 @@ struct MahoutApp: App {
     
     let persistenceController = PersistenceControllerForPreview.previewController1
     
+    init() {
+        ActivityTypeUnitTransformer.register()
+    }
+    
     var body: some Scene {
         WindowGroup {
             MainView().environment(\.managedObjectContext, persistenceController.container.viewContext)
