@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftui-introspect",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/siteline/swiftui-introspect",
+      "state" : {
+        "revision" : "1136c9a348329887844de9353107c787becc675b",
+        "version" : "0.11.0"
+      }
+    },
+    {
+      "identity" : "swiftui-navigation-transitions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/davdroman/swiftui-navigation-transitions",
+      "state" : {
+        "revision" : "8412ff50b86bd08296d0ebf7d8f474d79ddb037b",
+        "version" : "0.11.0"
+      }
+    }
+  ],
+  "version" : 2
+}

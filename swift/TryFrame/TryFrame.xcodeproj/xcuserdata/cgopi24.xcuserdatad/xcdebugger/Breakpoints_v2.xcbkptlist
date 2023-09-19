@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "806BE974-7E14-4574-A4EB-F1861ECEA5CA"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7235576A-C36D-432E-A37D-1A870E97A5C9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TryFrame/Model/GlobalAppState.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "loadCollectionIndex(resourceName:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7235576A-C36D-432E-A37D-1A870E97A5C9 - 64c0ca06f2370031"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.load_00000000_4b85_4910_b3a5_99f61640afda(collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "340">
+               </Location>
+               <Location
+                  uuid = "7235576A-C36D-432E-A37D-1A870E97A5C9 - e2ef4daff7a58d63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TryFrame.GlobalAppState.loadCollectionIndex(resourceName: Swift.String) async -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "1360">
+               </Location>
+               <Location
+                  uuid = "7235576A-C36D-432E-A37D-1A870E97A5C9 - e2ef4daff7a592a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TryFrame.GlobalAppState.loadCollectionIndex(resourceName: Swift.String) async -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "1360">
+               </Location>
+               <Location
+                  uuid = "7235576A-C36D-432E-A37D-1A870E97A5C9 - e2ef4daff7a59141"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TryFrame.GlobalAppState.loadCollectionIndex(resourceName: Swift.String) async -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "1360">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61ED8031-E7EA-4F27-959F-4241BBAE2638"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TryFrame/Model/GlobalAppState.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "loadPredefinedCollection()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "61ED8031-E7EA-4F27-959F-4241BBAE2638 - a56a02bfa8c6d56d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TryFrame.GlobalAppState.loadPredefinedCollection() -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "61ED8031-E7EA-4F27-959F-4241BBAE2638 - d8d46c3d21af4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in TryFrame.GlobalAppState.loadPredefinedCollection() -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "61ED8031-E7EA-4F27-959F-4241BBAE2638 - e8b334cf374b0a6f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TryFrame.GlobalAppState.loadPredefinedCollection() -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "61ED8031-E7EA-4F27-959F-4241BBAE2638 - a56a02bfa8c6d58c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TryFrame.GlobalAppState.loadPredefinedCollection() -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "61ED8031-E7EA-4F27-959F-4241BBAE2638 - d8d46c3d21afab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in TryFrame.GlobalAppState.loadPredefinedCollection() -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "61ED8031-E7EA-4F27-959F-4241BBAE2638 - e8b334cf374b0a8e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TryFrame.GlobalAppState.loadPredefinedCollection() -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "83B0237E-EF43-4761-999A-9E459745AA6C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TryFrame/Model/GlobalAppState.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "loadFlipCardCollectionInBuilt(collectionId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "83B0237E-EF43-4761-999A-9E459745AA6C - 8e6131c3c7bc6457"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.loadCollectionIndex(resourceName: Swift.String) async -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "83B0237E-EF43-4761-999A-9E459745AA6C - e2ef4daff7a58c95"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TryFrame.GlobalAppState.loadCollectionIndex(resourceName: Swift.String) async -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "83B0237E-EF43-4761-999A-9E459745AA6C - 7174dec6abb76190"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.loadFlipCardCollectionInBuilt(collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "3748">
+               </Location>
+               <Location
+                  uuid = "83B0237E-EF43-4761-999A-9E459745AA6C - 7174dec6abb761d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.loadFlipCardCollectionInBuilt(collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "3564">
+               </Location>
+               <Location
+                  uuid = "83B0237E-EF43-4761-999A-9E459745AA6C - 7174dec6abb77e76"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.loadFlipCardCollectionInBuilt(collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "3792">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D007A51-EDF9-4A97-9A62-D9297C7B1731"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TryFrame/Model/GlobalAppState.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "loadFlipCardCollectionInBuilt(collectionId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7D007A51-EDF9-4A97-9A62-D9297C7B1731 - 7174dec6abb769bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.loadFlipCardCollectionInBuilt(collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "840">
+               </Location>
+               <Location
+                  uuid = "7D007A51-EDF9-4A97-9A62-D9297C7B1731 - 7174dec6abb769bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.loadFlipCardCollectionInBuilt(collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "1116">
+               </Location>
+               <Location
+                  uuid = "7D007A51-EDF9-4A97-9A62-D9297C7B1731 - 26f3980c190af11c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (TryFrame.FlipCardCollection) -&gt; Swift.Bool in TryFrame.GlobalAppState.loadFlipCardCollectionInBuilt(collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "7D007A51-EDF9-4A97-9A62-D9297C7B1731 - 7174dec6abb769bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.loadFlipCardCollectionInBuilt(collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "856">
+               </Location>
+               <Location
+                  uuid = "7D007A51-EDF9-4A97-9A62-D9297C7B1731 - 7174dec6abb769bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.loadFlipCardCollectionInBuilt(collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "1160">
+               </Location>
+               <Location
+                  uuid = "7D007A51-EDF9-4A97-9A62-D9297C7B1731 - 7174dec6abb765b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.loadFlipCardCollectionInBuilt(collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "800">
+               </Location>
+               <Location
+                  uuid = "7D007A51-EDF9-4A97-9A62-D9297C7B1731 - 7174dec6abb765b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.loadFlipCardCollectionInBuilt(collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "1080">
+               </Location>
+               <Location
+                  uuid = "7D007A51-EDF9-4A97-9A62-D9297C7B1731 - 26f3980c190afd13"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (TryFrame.FlipCardCollection) -&gt; Swift.Bool in TryFrame.GlobalAppState.loadFlipCardCollectionInBuilt(collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "7D007A51-EDF9-4A97-9A62-D9297C7B1731 - 7174dec6abb76256"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.loadFlipCardCollectionInBuilt(collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "1028">
+               </Location>
+               <Location
+                  uuid = "7D007A51-EDF9-4A97-9A62-D9297C7B1731 - 7174dec6abb76256"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.loadFlipCardCollectionInBuilt(collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "1308">
+               </Location>
+               <Location
+                  uuid = "7D007A51-EDF9-4A97-9A62-D9297C7B1731 - 26f3980c190afaf7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (TryFrame.FlipCardCollection) -&gt; Swift.Bool in TryFrame.GlobalAppState.loadFlipCardCollectionInBuilt(collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "136">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08F46A7E-2198-43EF-8658-1DF8693157BD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TryFrame/Model/GlobalAppState.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "loadFlipCardCollectionInBuilt(collectionId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D7CFDA18-253E-46C4-BB2C-140385A259FE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TryFrame/Model/GlobalAppState.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "loadFlipCardCollectionInBuilt(collectionId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59C92563-1D15-4B3A-8F09-203C487EDD1D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TryFrame/Model/GlobalAppState.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "loadFlipCardCollectionInBuilt(collectionId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "59C92563-1D15-4B3A-8F09-203C487EDD1D - 7174dec6abb77fa0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.loadFlipCardCollectionInBuilt(collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "2864">
+               </Location>
+               <Location
+                  uuid = "59C92563-1D15-4B3A-8F09-203C487EDD1D - 7174dec6abb77fa0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.loadFlipCardCollectionInBuilt(collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "3244">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F71F2F1A-86B3-48E6-AFA7-E9D3C7958792"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TryFrame/Model/GlobalAppState.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "loadFlipCardCollectionInBuilt(collectionId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "806BA972-7878-4766-9020-195961597E49"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TryFrame/Model/GlobalAppState.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "loadFlipCardCollectionInBuilt(collectionId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E21C8590-F800-403C-8542-C795D1EFD8D4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TryFrame/Model/GlobalAppState.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "loadFlipCardCollectionInBuilt(collectionId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
