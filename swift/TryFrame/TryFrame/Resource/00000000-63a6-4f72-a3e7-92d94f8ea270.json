@@ -2,15 +2,16 @@
     "collectionId": "00000000-63a6-4f72-a3e7-92d94f8ea270",
     "questions": [{
             "id": 1,
-            "text": "What is the capital of India?",
-            "fontSize": "lg",
+            "text": "These types of questions are usually used by businesses to get customer reviews on their products or services. For example, you must have received a survey asking you to rate your cab ride experience once you reached your destination. Instead of stars, you can even use other types of rating scales such as “Thumbs up” or “Smileys”?",
+            "fontSize": "md",
+            "cardColorName": {"predefined": {"name": "CardColor1"} },
             "choices": {
                 "single": {
                     "options": [{
                             "choiceId": 1,
                             "content": {
                                 "text": {
-                                    "text": "New Delhi",
+                                    "text": "These types of questions are usually used by businesses to get customer reviews on their",
                                     "correct": true
                                 }
                             }
@@ -19,7 +20,7 @@
                             "choiceId": 2,
                             "content": {
                                 "text": {
-                                    "text": "Chennai",
+                                    "text": "even use other types of rating scales such as “Thumbs up” or “Smileys",
                                     "correct": false
                                 }
                             }
@@ -28,7 +29,7 @@
                             "choiceId": 3,
                             "content": {
                                 "text": {
-                                    "text": "Mumbai",
+                                    "text": "your cab ride experience once you reached your destination",
                                     "correct": false
                                 }
                             }
@@ -50,6 +51,7 @@
             "id": 2,
             "text": "Which of the following cities are in United State of America? (pick 2)",
             "fontSize": "lg",
+            "cardColorName": {"predefined": {"name": "CardColor2"} },
             "choices": {
                 "multi": {
                     "options": [{
@@ -96,6 +98,7 @@
             "id": 3,
             "text": "Which of the following unit do you use to measure length? (pick 3)",
             "fontSize": "lg",
+            "cardColorName": {"predefined": {"name": "CardColor3"} },
             "choices": {
                 "multi": {
                     "options": [{

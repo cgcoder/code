@@ -9,26 +9,31 @@ import SwiftUI
 
 struct FlashCardView: View {
     @StateObject var state: FlashCardState = FlashCardState(resetViewOnFlip: false)
-    
-    var question: FlipCardQuestion
+    @EnvironmentObject var appState: GlobalAppState
+    var backgroundColor: Color?
     
     var body: some View {
         ZStack {
             TwoSidedFlipView(
-                frontView: FlipSideView(contentView: FlashCardQuestionView(flipMethod: state.flip), isFront: true, flipViewState: state),
-                backView: FlipSideView(contentView: FlashCardAnswerView(question: question), isFront: false, flipViewState: state),
+                frontView: FlipSideView(contentView: FlashCardQuestionView(flipMethod: flip), isFront: true, bgColor: backgroundColor ?? .gray, flipViewState: state),
+                backView: FlipSideView(contentView: FlashCardQuestionView(flipMethod: flip, answerView: true), isFront: false, bgColor: backgroundColor ?? .gray, flipViewState: state),
+                allowFlipOnTap: appState.currentQuestion.isOnlyQuestion(),
                 cardState: state)
-        }.onAppear {
-            state.animateProgress()
         }
         .onReceive(state.timer, perform: { _ in
             state.clockTick()
         })
     }
+    
+    func flip() -> Void {
+        appState.wasAnswerRevealed = true
+        self.state.flip()
+    }
 }
 
 struct FlashCard_Previews: PreviewProvider {
     static var previews: some View {
-        FlashCardView(question: FlipCardQuestion.sampleTextQuestion(id: 1))
+        FlashCardView()
+            .environmentObject(GlobalAppState.appStateForPreviewMultichoice())
     }
 }

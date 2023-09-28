@@ -21,7 +21,6 @@ struct ChoiceContent: Codable {
 enum ChoiceContentType: Codable {
     case text(text: String, correct: Bool)
     case image(url: String, correct: Bool)
-    case boolean(truth: Bool)
     
     func isText() -> Bool {
         switch self {
@@ -31,15 +30,24 @@ enum ChoiceContentType: Codable {
             return false
         }
     }
+    
+    func isCorrect() -> Bool {
+        switch self {
+        case .text(_, let correct):
+            return correct
+        case .image(_, let correct):
+            return correct
+        }
+    }
 }
 
 enum QuestionChoice: Codable {
     case single(options: [ChoiceContent])
     case multi(options: [ChoiceContent])
-    case yesNo(options: [ChoiceContent])
+    case yesNo(truth: Bool)
     case text(content: String)
     
-func getSingleChoices() -> [ChoiceContent]? {
+    func getSingleChoices() -> [ChoiceContent]? {
         switch self {
         case .single(let options):
             return options
@@ -54,6 +62,24 @@ func getSingleChoices() -> [ChoiceContent]? {
             return options
         default:
             return nil
+        }
+    }
+    
+    func getTextChoice() -> String? {
+        switch self {
+        case .text(let content):
+            return content
+        default:
+            return nil
+        }
+    }
+    
+    func showOptions() -> Bool {
+        switch self {
+        case .text:
+            return false
+        default:
+            return true
         }
     }
 }
@@ -81,27 +107,42 @@ enum FontSize: String, Codable {
     }
 }
 
-struct FlipCardCollection: Codable {
+struct FlipCardCollection: Codable, Hashable {
+    static func == (lhs: FlipCardCollection, rhs: FlipCardCollection) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
     var name: String
     var id: UUID
     var description: String
     var cardColorName: FlipCardColor
     var isBuiltIn: Bool?
     
-    func getCardColor() -> UIColor {
+    var hashValue: Int { self.id.hashValue }
+    func hash(into hasher: inout Hasher) {
+        self.id.hash(into: &hasher)
+    }
+    func getCardColor() -> Color {
         switch self.cardColorName {
         case .predefined(let name):
-            return UIColor(named: name) ?? UIColor.gray
+            return Color(name)
         case .custom(let red, let blue, let green):
-            return UIColor(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: 1.0) 
+            return Color(uiColor: UIColor(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: 1.0))
         }
     }
+    
 }
 
-struct FlipCardCollectionContent: Codable {
+struct FlipCardCollectionContent: Codable, Hashable {
     var collectionId: UUID
     var questions: [FlipCardQuestion]
-    
+    static func == (lhs: FlipCardCollectionContent, rhs: FlipCardCollectionContent) -> Bool {
+        return lhs.collectionId == rhs.collectionId
+    }
+    var hashValue: Int { self.collectionId.hashValue }
+    func hash(into hasher: inout Hasher) {
+        self.collectionId.hash(into: &hasher)
+    }
     static func shuffle(shuffle: Bool, content: FlipCardCollectionContent) -> [FlipCardQuestion] {
         guard shuffle else {
             return content.questions
@@ -134,4 +175,6 @@ struct FlipCardQuestion: Codable {
     var text: String
     var fontSize: FontSize
     var choices: QuestionChoice
+    var explanation: String?
+    var imageUrl: String?
 }

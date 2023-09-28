@@ -9,15 +9,19 @@ import SwiftUI
 
 struct FlashCardAnswerView: View {
     
-    var question: FlipCardQuestion
+    var flipMethod: (() -> Void)?
+    @EnvironmentObject var appState: GlobalAppState
     
     var body: some View {
         VStack(alignment: .center) {
-            Spacer()
-            AnswerView(question: question)
-            Spacer()
+            QuestionPart(question: appState.currentQuestion)
+            VStack {
+                AnswerView(question: appState.currentQuestion)
+            }
+            .frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+            FlashCardNavCtrlView(flipMethod: flipMethod)
         }
-        .padding([.top], 20)
+        .padding([.top, .bottom], 10)
         // .padding([.leading, .trailing], 10)
     }
 }
@@ -37,5 +41,9 @@ struct AnswerView: View {
 }
 
 #Preview {
-    FlashCardAnswerView(question: FlipCardQuestion.sampleTextQuestion(id: 1))
+    //FlashCardAnswerView()
+      //  .environmentObject(GlobalAppState.appStateForPreviewMultichoice())
+    
+    FlashCardAnswerView()
+        .environmentObject(GlobalAppState.appStateForPreview())
 }

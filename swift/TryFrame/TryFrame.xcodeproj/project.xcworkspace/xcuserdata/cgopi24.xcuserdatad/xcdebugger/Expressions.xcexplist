@@ -3,6 +3,55 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "closure #1 in closure #1 in SingleTextChoiceView.body.getter:FlashCardQuestionView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "!showAnswer &amp;&amp; !appState.wasAnswerRevealed">
+            </PersistentString>
+            <PersistentString
+               value = "appState.wasAnswerRevealed">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in FlipSideView.body.getter:FlipSideView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.appState">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GlobalAppState.nextQuestion():GlobalAppState.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "currentFlipCardCollectionContent!.questions.count">
+            </PersistentString>
+            <PersistentString
+               value = "currentQuestionIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in FlashCardQuestionView.body.getter:FlashCardQuestionView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.answerView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GlobalAppState.recordAnswer():GlobalAppState.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.answerState">
+            </PersistentString>
+            <PersistentString
+               value = "self.selectedAnswers">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "GlobalAppState.loadFlipCardCollectionInBuilt(collectionId:):GlobalAppState.swift">
          <PersistentStrings>
             <PersistentString
@@ -10,6 +59,36 @@
             </PersistentString>
             <PersistentString
                value = "">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GlobalAppState.currentContent.getter:GlobalAppState.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.shuffledContent!.questions[0].id">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static FlipCardCollectionContent.shuffle(shuffle:content:):FlipCardCollection.swift">
+      </ContextState>
+      <ContextState
+         contextName = "FlashCardState.flip():FlashCardState.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.showBack">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GlobalAppState.correctlyAnsweredCount.getter:GlobalAppState.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.currentContent">
+            </PersistentString>
+            <PersistentString
+               value = "self.answerState">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

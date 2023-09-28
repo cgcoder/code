@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct TestView: View {
-    @State var count: Double = 0
-    @State var angle: Double = 0
-    @State var counter: Int = 0
-    @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    
     var body: some View {
         VStack {
-            Text("Count is \(counter)")
+            View1(index: 1)
+            View1(index: 2)
+            View1(index: 3)
         }
-        .onReceive(timer, perform: { _ in
-            counter += 1
-        })
+        .background(.red)
+    }
+}
+
+struct View1: View {
+    var index: Int
+    var body: some View {
+        VStack {
+            Text("Helllo")
+        }
+        .frame(maxWidth: .infinity, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+        .background(index % 2 == 0 ? .yellow : .blue)
     }
 }
 

@@ -1,0 +1,52 @@
+
+{
+    "collectionId": "00000000-1f0f-49bc-956c-f457a017c74e",
+    "questions": [{
+            "id": 1,
+            "text": "Which one of the following is the flag of India?",
+            "fontSize": "md",
+            "cardColorName": {"predefined": {"name": "CardColor1"} },
+            "choices": {
+                "single": {
+                    "options": [{
+                            "choiceId": 1,
+                            "content": {
+                                "image": {
+                                    "url": "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/255px-Flag_of_India.svg.png",
+                                    "correct": true
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 2,
+                            "content": {
+                                "image": {
+                                    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Pakistan.svg/255px-Flag_of_Pakistan.svg.png",
+                                    "correct": false
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 3,
+                            "content": {
+                                "image": {
+                                    "url": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/255px-Flag_of_France.svg.png",
+                                    "correct": false
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 4,
+                            "content": {
+                                "image": {
+                                    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/255px-Flag_of_Nigeria.svg.png",
+                                    "correct": false
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

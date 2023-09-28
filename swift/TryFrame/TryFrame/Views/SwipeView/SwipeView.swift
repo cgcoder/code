@@ -12,35 +12,35 @@ class SwipeState: ObservableObject {
 }
 
 struct SwipeView: View {
-    var shuffled: Bool = false
     @EnvironmentObject var appState: GlobalAppState
-    @State var state: SwipeDirection = .up
 
     var body: some View {
         ZStack {
-            ForEach(appState.getQuestions(shuffled: shuffled), id: \.id) { question in
-                if (appState.isCurrentQuestion(shuffled: shuffled, id: question.id)) {
-                    FlashCardView(question: question).transition(.asymmetric(insertion: .move(edge: state == .up ? .bottom : .top), removal: .scale))
+            if (appState.collectionStatus == .progress) {
+                ForEach(appState.currentContent!.questions, id: \.id) { question in
+                    if (appState.isCurrentQuestion(id: question.id)) {
+                        FlashCardView(
+                            backgroundColor: appState.currentFlipcardCollection?.getCardColor())
+                        .transition(.asymmetric(insertion: .move(edge: appState.nextQuestionMode == .up ? .bottom : .top).combined(with: .opacity), removal: .scale))
+                    }
                 }
             }
+            else if (appState.collectionStatus == .complete) {
+                CompletedCollectionView()
+            }
         }
-        .navigationTitle(appState.currentFlipCardCollection!.name)
+        .navigationTitle(appState.currentFlipcardCollection!.name)
         .navigationBarTitleDisplayMode(.inline)
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         .onSwipeUpGesture { direction in
             withAnimation {
                 if (direction == .up) {
-                    state = .up
                     appState.nextQuestion()
                 }
                 else if (direction == .down) {
-                    state = .down
                     appState.prevQuestion()
                 }
             }
-        }
-        .onAppear {
-            appState.setShuffleMode(self.shuffled)
         }
     }
 }

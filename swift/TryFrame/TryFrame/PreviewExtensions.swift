@@ -39,8 +39,8 @@ extension GlobalAppState {
         let appState = GlobalAppState()
         appState.collectionPageLoadStatus = .done
         appState.homePageLoadStatus = .done
-        appState.currentFlipCardCollection = FlipCardCollection.sampleFlipCardCollection()
-        appState.currentFlipCardCollectionContent = sampleContent(collectionId: appState.currentFlipCardCollection!.id)
+        appState.currentFlipcardCollection = FlipCardCollection.sampleFlipCardCollection()
+        appState.openedContent = sampleContent(collectionId: appState.currentFlipcardCollection!.id)
         return appState
     }
     
@@ -48,8 +48,8 @@ extension GlobalAppState {
         let appState = GlobalAppState()
         appState.collectionPageLoadStatus = .done
         appState.homePageLoadStatus = .done
-        appState.currentFlipCardCollection = FlipCardCollection.sampleFlipCardCollection()
-        appState.currentFlipCardCollectionContent = sampleMultiChoices(collectionId: appState.currentFlipCardCollection!.id)
+        appState.currentFlipcardCollection = FlipCardCollection.sampleFlipCardCollection()
+        appState.openedContent = sampleMultiChoices(collectionId: appState.currentFlipcardCollection!.id)
         return appState
     }
     

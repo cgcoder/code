@@ -1,0 +1,101 @@
+
+{
+    "collectionId": "00000000-f4d5-4c68-8ccf-cf632c5ae184",
+    "questions": [{
+            "id": 1,
+            "text": "Guess the country of this flag.",
+            "fontSize": "md",
+            "cardColorName": {"predefined": {"name": "CardColor1"} },
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/255px-Flag_of_the_United_States.svg.png",
+            "choices": {
+                "single": {
+                    "options": [{
+                            "choiceId": 1,
+                            "content": {
+                                "text": {
+                                    "text": "Malaysia",
+                                    "correct": false
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 2,
+                            "content": {
+                                "text": {
+                                    "text": "United State of America",
+                                    "correct": true
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 3,
+                            "content": {
+                                "text": {
+                                    "text": "Indonesia",
+                                    "correct": false
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 4,
+                            "content": {
+                                "text": {
+                                    "text": "Sweden",
+                                    "correct": false
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": 2,
+            "text": "Guess the country of this flag.",
+            "fontSize": "lg",
+            "cardColorName": {"predefined": {"name": "CardColor2"} },
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/255px-Flag_of_Russia.svg.png",
+            "choices": {
+                "multi": {
+                    "options": [{
+                            "choiceId": 1,
+                            "content": {
+                                "text": {
+                                    "text": "Moscow",
+                                    "correct": false
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 2,
+                            "content": {
+                                "text": {
+                                    "text": "France",
+                                    "correct": false
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 3,
+                            "content": {
+                                "text": {
+                                    "text": "Kenya",
+                                    "correct": false
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 4,
+                            "content": {
+                                "text": {
+                                    "text": "Russia",
+                                    "correct": true
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,6 +1,20 @@
 {
     "collections": [
         {
+            "name": "Guess The Flag",
+            "id": "00000000-1f0f-49bc-956c-f457a017c74e",
+            "description": "Guess the countries flag",
+            "cardColorName": {"predefined": {"name": "CardColor5" }},
+            "isBuiltIn": true
+        },
+        {
+            "name": "Guess the Country",
+            "id": "00000000-f4d5-4c68-8ccf-cf632c5ae184",
+            "description": "Guess the Country for the flag",
+            "cardColorName": {"predefined": {"name": "CardColor6" }},
+            "isBuiltIn": true
+        },
+        {
             "name": "Multiplication Level 1",
             "id": "00000000-4b85-4910-b3a5-99f61640afda",
             "description": "Single Digit Multiplication from 1 to 5",

@@ -12,16 +12,16 @@ struct Tile: View {
     let collection: FlipCardCollection
     
     var body: some View {
-        NavigationLink(destination: FlipCardCollectionView(collectionId: collection.id)) {
+        NavigationLink(value: collection) {
             VStack(alignment: .leading) {
-                Text(collection.name).font(.system(size: 20)).foregroundStyle(Color.white).multilineTextAlignment(.leading)
+                Text(collection.name).font(.system(size: 20)).foregroundStyle(Color.primary).multilineTextAlignment(.leading)
                 Text(collection.description).lineLimit(2).fontWeight(.light).font(.system(size: 19)).foregroundStyle(Color.secondary).multilineTextAlignment(.leading)
                 Spacer()
             }
             .padding(7)
             .padding([.top], 10)
             .frame(minWidth: 230, maxWidth: 230, minHeight: 175, maxHeight: 175, alignment: .leading)
-            .background(Color(uiColor: self.collection.getCardColor()))
+            .background(self.collection.getCardColor())
             .clipShape(RoundedRectangle(cornerRadius: 5))
             .innerShadow(shape: RoundedRectangle(cornerRadius: 5), color: .white, lineWidth: 7)
         }
@@ -47,7 +47,7 @@ struct HomePageView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(appState.flipcardCollections, id: \.id) { collection in
-                        Tile(collection: collection)
+                        Tile(collection: collection).padding([.leading], 5)
                     }
                 }
             }
@@ -58,7 +58,7 @@ struct HomePageView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(appState.flipcardCollections, id: \.id) { collection in
-                        Tile(collection: collection)
+                        Tile(collection: collection).padding([.leading], 5)
                     }
                 }
             }
@@ -69,6 +69,18 @@ struct HomePageView: View {
             Spacer()
         }
         .navigationTitle("Welcome!")
+        .navigationDestination(for: FlipCardCollection.self) { collection in
+            FlashCardCollectionView(collectionId: collection.id, reviewMode: false)
+        }
+        .navigationDestination(for: FlipCardCollectionContent.self) { content in
+            SwipeView()
+        }
+        .navigationDestination(for: NavAction.self) { navAction in
+            switch navAction {
+            case .collectionContentReview:
+                FlashCardCollectionView(collectionId: nil, reviewMode: true)
+            }
+        }
     }
 }
 

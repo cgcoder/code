@@ -10,9 +10,10 @@ import SwiftUI
 struct MainView: View {
     let gradient = LinearGradient(colors: [Color("BackgroundColorStart"), Color("BackgroundColorEnd")],
                                   startPoint: .topLeading, endPoint: .bottomTrailing)
+    @EnvironmentObject var appState: GlobalAppState
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $appState.navigationPath) {
             ZStack {
                 gradient.ignoresSafeArea()
                 HomePageView().padding(10)
