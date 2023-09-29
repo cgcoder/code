@@ -11,6 +11,8 @@ struct FlashCardCollectionView: View {
     
     var collectionId: UUID?
     @EnvironmentObject var appState: GlobalAppState
+    @Environment(\.managedObjectContext) var managedContext
+    
     var reviewMode: Bool
     
     var body: some View {
@@ -19,7 +21,7 @@ struct FlashCardCollectionView: View {
             if appState.collectionPageLoadStatus == .done {
                 FlashCardCollectionViewBody(reviewMode: reviewMode)
             }
-            else if appState.collectionPageLoadStatus == .loading {
+            else if appState.collectionPageLoadStatus == .progress {
                 Text("loading...")
             }
             else {
@@ -32,12 +34,11 @@ struct FlashCardCollectionView: View {
             }
         }
         .navigationTitle("\(appState.currentFlipcardCollection?.name ?? "")\(reviewMode ? " - Review" : "")")
-        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             Button {
-                
+                appState.updateFavorite(context: managedContext, collectionId: appState.currentFlipcardCollection!.id)
             } label: {
-                Image(systemName: "heart").foregroundColor(.white)
+                Image(systemName: self.appState.isFavorite(self.appState.currentFlipcardCollection?.id ?? UUID()) ? "heart.fill" : "heart").foregroundColor(.white)
             }
         }
     }
@@ -58,22 +59,24 @@ struct FlashCardCollectionViewBody: View {
             Spacer()
             HStack {
                 Spacer()
-                Button("Start") {
+                Button {
                     appState.startCollection(contentMode: reviewMode ? .review : .ordered)
                     appState.navigationPath.append(appState.currentContent!)
+                } label: {
+                    Image(systemName: "play.circle").foregroundStyle(.white)
+                        .imageScale(.large)
                 }
-                .buttonStyle(.borderedProminent)
+                .buttonStyle(NeumorphicButtonStyle(bgColor: .green))
+                
                 Spacer()
-                Button("Shuffle & Start") {
+                Button {
                     appState.startCollection(contentMode: reviewMode ? .shuffledReview : .shuffled)
                     appState.navigationPath.append(appState.currentContent!)
+                } label: {
+                    Image(systemName: "shuffle.circle").foregroundStyle(.white)
+                        .imageScale(.large)
                 }
-                .buttonStyle(.borderedProminent)
-                Spacer()
-                Button("Back") {
-                    presentationMode.wrappedValue.dismiss()
-                }
-                .buttonStyle(.borderedProminent)
+                .buttonStyle(NeumorphicButtonStyle(bgColor: .green))
                 Spacer()
             }
             .padding(20)

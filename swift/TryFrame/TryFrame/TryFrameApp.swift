@@ -20,8 +20,9 @@ struct TryFrameApp: App {
         WindowGroup {
             MainView()
                 .environmentObject(globalState)
+                .environment(\.managedObjectContext, globalState.dataContainer.viewContext)
                 .onAppear {
-                    globalState.loadPredefinedCollection()
+                    globalState.initialize()
                 }
             // HomePageView()
             // TestView()

@@ -57,7 +57,7 @@ struct HomePageView: View {
             Text("Favorites").font(.system(size: 20))
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    ForEach(appState.flipcardCollections, id: \.id) { collection in
+                    ForEach(appState.favoriteCollections, id: \.id) { collection in
                         Tile(collection: collection).padding([.leading], 5)
                     }
                 }
@@ -80,6 +80,9 @@ struct HomePageView: View {
             case .collectionContentReview:
                 FlashCardCollectionView(collectionId: nil, reviewMode: true)
             }
+        }
+        .onAppear {
+            appState.initialize()
         }
     }
 }

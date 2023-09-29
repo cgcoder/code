@@ -171,8 +171,8 @@
             filePath = "TryFrame/Views/FlipView/FlashCardQuestionView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -219,8 +219,8 @@
             filePath = "TryFrame/Model/GlobalAppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "365"
-            endingLineNumber = "365"
+            startingLineNumber = "392"
+            endingLineNumber = "392"
             landmarkName = "isCorrectlyAnswered(selectedIds:)"
             landmarkType = "7">
             <Locations>
@@ -282,8 +282,8 @@
             filePath = "TryFrame/Model/GlobalAppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "366"
-            endingLineNumber = "366"
+            startingLineNumber = "393"
+            endingLineNumber = "393"
             landmarkName = "isCorrectlyAnswered(selectedIds:)"
             landmarkType = "7">
             <Locations>
@@ -375,8 +375,8 @@
             filePath = "TryFrame/Model/GlobalAppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "startCollection(contentMode:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -391,8 +391,8 @@
             filePath = "TryFrame/Model/GlobalAppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "currentContent"
             landmarkType = "24">
          </BreakpointContent>
@@ -487,8 +487,8 @@
             filePath = "TryFrame/Model/GlobalAppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "correctlyAnsweredCount"
             landmarkType = "24">
             <Locations>
@@ -535,8 +535,8 @@
             filePath = "TryFrame/Model/GlobalAppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
             landmarkName = "recordAnswer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -551,8 +551,8 @@
             filePath = "TryFrame/Model/GlobalAppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
             landmarkName = "recordAnswer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -567,8 +567,8 @@
             filePath = "TryFrame/Model/GlobalAppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "startCollection(contentMode:)"
             landmarkType = "7">
          </BreakpointContent>

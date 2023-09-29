@@ -53,7 +53,7 @@ struct CompletedCollectionView: View {
                         appState.navigationPath.removeLast(2)
                         appState.navigationPath.append(self.appState.currentFlipcardCollection!)
                     } label: {
-                           Image(systemName: "restart.circle").foregroundStyle(.white)
+                           Image(systemName: "repeat.circle").foregroundStyle(.white)
                             .imageScale(.large)
                         }
                         .buttonStyle(NeumorphicButtonStyle(bgColor: .red))
@@ -135,7 +135,7 @@ struct NeumorphicButtonStyle: ButtonStyle {
         )
         .scaleEffect(configuration.isPressed ? 0.95: 1)
         .foregroundColor(.primary)
-        .animation(.spring(), value: configuration.isPressed)
+        .animation(.spring(duration: 0.25), value: configuration.isPressed)
     }
 }
 

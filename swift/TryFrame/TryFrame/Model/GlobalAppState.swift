@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import CoreData
 
 @MainActor
 class GlobalAppState: ObservableObject {
@@ -17,15 +18,16 @@ class GlobalAppState: ObservableObject {
         case review
         case shuffledReview
     }
-    
+    @Published var dbLoadStatus: LoadStatus = .idle
+    @Published var dbSaveStatus: LoadStatus = .idle
     @Published var loadedData: String = ""
-    @Published var homePageLoadStatus: LoadStatus = .loading
+    @Published var homePageLoadStatus: LoadStatus = .progress
     @Published var flipcardCollections: [FlipCardCollection] = []
     @Published var currentFlipcardCollection: FlipCardCollection? = nil
     @Published var openedContent: FlipCardCollectionContent? = nil
     @Published var shuffledContent: FlipCardCollectionContent? = nil
     @Published var reviewContent: FlipCardCollectionContent? = nil
-    @Published var collectionPageLoadStatus: LoadStatus = .loading
+    @Published var collectionPageLoadStatus: LoadStatus = .progress
     @Published var currentQuestionIndex: Int = 0
     @Published var selectedAnswers: [UInt64:Set<Int32>] = [:]
     @Published var nextQuestionMode: SwipeDirection = .up
@@ -35,6 +37,10 @@ class GlobalAppState: ObservableObject {
     @Published var userSelectedAnswerStatus: AnswerStatus = .skipped // user selected status only for text only questions
     @Published var navigationPath: NavigationPath = NavigationPath()
     @Published var contentMode: ContentMode = .ordered
+    @Published var favorites: Set<Favorites> = []
+    
+    var initialized: Bool = false
+    let dataContainer = NSPersistentContainer(name: "Model")
     
     var currentContent: FlipCardCollectionContent? {
         print("\(self.contentMode)")
@@ -70,6 +76,21 @@ class GlobalAppState: ObservableObject {
         return self.answerState.filter { state in
             return self.currentContent!.questions.contains(where: {$0.id == state.key}) && state.value == .skipped
         }.count
+    }
+    
+    var favoriteCollections: [FlipCardCollection] {
+        self.flipcardCollections.filter { c in
+            return self.isFavorite(c.id)
+        }
+    }
+    
+    func initialize() -> Void {
+        guard !initialized else { return }
+        
+        self.loadPredefinedCollection()
+        self.loadDataFromCoreData()
+        self.loadFavorites(context: self.dataContainer.viewContext)
+        self.initialized = true
     }
     
     func restartCollection() -> Void {
@@ -118,7 +139,7 @@ class GlobalAppState: ObservableObject {
     }
     
     func loadPredefinedCollection() -> Void {
-        self.homePageLoadStatus = .loading
+        self.homePageLoadStatus = .progress
         Task {
             await loadCollectionIndex(resourceName: "predefinedCollections")
         }
@@ -128,7 +149,7 @@ class GlobalAppState: ObservableObject {
             return
         }
         
-        self.collectionPageLoadStatus = .loading
+        self.collectionPageLoadStatus = .progress
         self.resetContent()
         if (collectionId.uuidString.hasPrefix("00000000")) {
             loadFlipCardCollectionInBuilt(collectionId: collectionId)
@@ -246,6 +267,11 @@ class GlobalAppState: ObservableObject {
         self.selectedAnswers.count != 0
     }
     
+    func isFavorite(_ collectionId: UUID) -> Bool {
+        let favorite = self.favorites.first(where: { $0.collectionId == collectionId })
+        return favorite != nil
+    }
+    
     private func loadFlipCardCollectionInBuilt(collectionId: UUID) -> Void {
         
         let id: String = collectionId.uuidString.lowercased()
@@ -343,8 +369,9 @@ class GlobalAppState: ObservableObject {
 }
 
 enum LoadStatus: Equatable {
-    case loading
-    case longLoading
+    case idle
+    case progress
+    case longProgress
     case done
     case error(message: String)
 }

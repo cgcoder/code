@@ -26,6 +26,8 @@
 		423FF1DC2AC0A0F700CEAFFB /* NavAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423FF1DB2AC0A0F700CEAFFB /* NavAction.swift */; };
 		4243A9072AC551D200989DB4 /* 00000000-1f0f-49bc-956c-f457a017c74e.json in Resources */ = {isa = PBXBuildFile; fileRef = 4243A9062AC54FB800989DB4 /* 00000000-1f0f-49bc-956c-f457a017c74e.json */; };
 		4243A9092AC55F2800989DB4 /* 00000000-f4d5-4c68-8ccf-cf632c5ae184.json in Resources */ = {isa = PBXBuildFile; fileRef = 4243A9082AC55EF400989DB4 /* 00000000-f4d5-4c68-8ccf-cf632c5ae184.json */; };
+		4243A90D2AC681CD00989DB4 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4243A90B2AC681CD00989DB4 /* Model.xcdatamodeld */; };
+		4243A90F2AC6863000989DB4 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4243A90E2AC6863000989DB4 /* AppData.swift */; };
 		42463BA52AB5117D005D0090 /* predefinedCollections.json in Resources */ = {isa = PBXBuildFile; fileRef = 42B36E832AA3E33100EE6A9D /* predefinedCollections.json */; };
 		42463BA82AB5E6C1005D0090 /* FlashCardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42463BA72AB5E6C1005D0090 /* FlashCardCollectionView.swift */; };
 		424BCBB02AB9548000143A1E /* 00000000-63a6-4f72-a3e7-92d94f8ea270.json in Resources */ = {isa = PBXBuildFile; fileRef = 424BCBAF2AB9547200143A1E /* 00000000-63a6-4f72-a3e7-92d94f8ea270.json */; };
@@ -79,6 +81,8 @@
 		423FF1DB2AC0A0F700CEAFFB /* NavAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavAction.swift; sourceTree = "<group>"; };
 		4243A9062AC54FB800989DB4 /* 00000000-1f0f-49bc-956c-f457a017c74e.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "00000000-1f0f-49bc-956c-f457a017c74e.json"; sourceTree = "<group>"; };
 		4243A9082AC55EF400989DB4 /* 00000000-f4d5-4c68-8ccf-cf632c5ae184.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "00000000-f4d5-4c68-8ccf-cf632c5ae184.json"; sourceTree = "<group>"; };
+		4243A90C2AC681CD00989DB4 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		4243A90E2AC6863000989DB4 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		42463BA62AB5DFF9005D0090 /* 00000000-4b85-4910-b3a5-99f61640afda.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "00000000-4b85-4910-b3a5-99f61640afda.json"; sourceTree = "<group>"; };
 		42463BA72AB5E6C1005D0090 /* FlashCardCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardCollectionView.swift; sourceTree = "<group>"; };
 		424BCBAF2AB9547200143A1E /* 00000000-63a6-4f72-a3e7-92d94f8ea270.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "00000000-63a6-4f72-a3e7-92d94f8ea270.json"; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 		420ED6EC2A98112C00BB6996 /* TryFrame */ = {
 			isa = PBXGroup;
 			children = (
+				4243A90A2AC681BE00989DB4 /* CoreData */,
 				42B36E822AA3E30A00EE6A9D /* Resource */,
 				42B36E812AA2C6E000EE6A9D /* DataModel */,
 				42B36E762AA265FD00EE6A9D /* Model */,
@@ -215,6 +220,14 @@
 			path = SwipeView;
 			sourceTree = "<group>";
 		};
+		4243A90A2AC681BE00989DB4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4243A90B2AC681CD00989DB4 /* Model.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		42B36E762AA265FD00EE6A9D /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +236,7 @@
 				42BC41402ABF763C00DCF2DB /* ProgressStatus.swift */,
 				42BC41422ABF8A4A00DCF2DB /* AnswerStatus.swift */,
 				423FF1DB2AC0A0F700CEAFFB /* NavAction.swift */,
+				4243A90E2AC6863000989DB4 /* AppData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -387,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42BC41412ABF763C00DCF2DB /* ProgressStatus.swift in Sources */,
+				4243A90F2AC6863000989DB4 /* AppData.swift in Sources */,
 				423FF1DC2AC0A0F700CEAFFB /* NavAction.swift in Sources */,
 				42BC413F2ABF2C0C00DCF2DB /* FlashCardNavCtrlView.swift in Sources */,
 				420ED71C2A98AD2000BB6996 /* Extensions.swift in Sources */,
@@ -395,6 +410,7 @@
 				420ED6F02A98112C00BB6996 /* ContentView.swift in Sources */,
 				42463BA82AB5E6C1005D0090 /* FlashCardCollectionView.swift in Sources */,
 				420ED7272A99512C00BB6996 /* SwipeView.swift in Sources */,
+				4243A90D2AC681CD00989DB4 /* Model.xcdatamodeld in Sources */,
 				420ED7182A987D7000BB6996 /* FlashCardView.swift in Sources */,
 				42B36E802AA2C6D800EE6A9D /* FlipCardCollection.swift in Sources */,
 				420ED6EE2A98112C00BB6996 /* TryFrameApp.swift in Sources */,
@@ -727,6 +743,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4243A90B2AC681CD00989DB4 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4243A90C2AC681CD00989DB4 /* Model.xcdatamodel */,
+			);
+			currentVersion = 4243A90C2AC681CD00989DB4 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 420ED6E22A98112C00BB6996 /* Project object */;
 }

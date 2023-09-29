@@ -14,39 +14,42 @@ struct FlashCardQuestionView: View {
     @EnvironmentObject var appState: GlobalAppState
     
     var body: some View {
-        VStack(alignment: .leading) {
-            QuestionPart(question: appState.currentQuestion, answerView: answerView).padding(2)
-            if appState.currentQuestion.choices.showOptions() || answerView {
-                ChoicesView(question: appState.currentQuestion, answerView: answerView).padding(2)
-            }
-            
-            if (answerView && appState.currentQuestion.choices.getTextChoice() != nil) {
-                HStack {
-                    Spacer()
-                    Button() {
-                        appState.userSelectedAnswerStatus = .correct
-                    } label: {
-                        Image(systemName: "hand.thumbsup")
-                    }
-                    .padding(15)
-                    .foregroundColor(.white)
-                    .buttonStyle(NeumorphicButtonStyle(bgColor: appState.userSelectedAnswerStatus == .correct ? .green : .gray))
-                    Spacer()
-                    Button() {
-                        appState.userSelectedAnswerStatus = .wrong
-                    } label: {
-                        Image(systemName: "hand.thumbsdown")
-                    }
-                    .padding(15)
-                    .foregroundColor(.white)
-                    .buttonStyle(NeumorphicButtonStyle(bgColor: appState.userSelectedAnswerStatus == .wrong ? .red : .gray))
-                    Spacer()
+        ZStack(alignment: .top) {
+            Text("1/10").frame(maxWidth: .infinity, alignment: .trailing).padding(5).font(.footnote)
+            VStack(alignment: .leading) {
+                QuestionPart(question: appState.currentQuestion, answerView: answerView).padding(2)
+                if appState.currentQuestion.choices.showOptions() || answerView {
+                    ChoicesView(question: appState.currentQuestion, answerView: answerView).padding(2)
                 }
+                
+                if (answerView && appState.currentQuestion.choices.getTextChoice() != nil) {
+                    HStack {
+                        Spacer()
+                        Button() {
+                            appState.userSelectedAnswerStatus = .correct
+                        } label: {
+                            Image(systemName: "hand.thumbsup")
+                        }
+                        .padding(15)
+                        .foregroundColor(.white)
+                        .buttonStyle(NeumorphicButtonStyle(bgColor: appState.userSelectedAnswerStatus == .correct ? .green : .gray))
+                        Spacer()
+                        Button() {
+                            appState.userSelectedAnswerStatus = .wrong
+                        } label: {
+                            Image(systemName: "hand.thumbsdown")
+                        }
+                        .padding(15)
+                        .foregroundColor(.white)
+                        .buttonStyle(NeumorphicButtonStyle(bgColor: appState.userSelectedAnswerStatus == .wrong ? .red : .gray))
+                        Spacer()
+                    }
+                }
+                
+                FlashCardNavCtrlView(answerView: answerView, flipMethod: flipMethod)
             }
-            
-            FlashCardNavCtrlView(answerView: answerView, flipMethod: flipMethod)
+            .padding([.top, .bottom])
         }
-        .padding([.top, .bottom])
     }
 }
 
@@ -74,7 +77,8 @@ struct QuestionPart: View {
                                 placeholder: {
                                     ProgressView()
                                 }
-                            ).frame(width: 200, height: 120)
+                            )
+                            .frame(width: 200, height: 120)
                         }
                     }
                     .frame(width: geometry.size.width)
