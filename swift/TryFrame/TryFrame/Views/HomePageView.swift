@@ -14,16 +14,16 @@ struct Tile: View {
     var body: some View {
         NavigationLink(value: collection) {
             VStack(alignment: .leading) {
-                Text(collection.name).font(.system(size: 20)).foregroundStyle(Color.primary).multilineTextAlignment(.leading)
-                Text(collection.description).lineLimit(2).fontWeight(.light).font(.system(size: 19)).foregroundStyle(Color.secondary).multilineTextAlignment(.leading)
+                Text(collection.name).font(.system(.callout)).foregroundStyle(Color.primary).multilineTextAlignment(.leading)
+                Text(collection.description).lineLimit(2).fontWeight(.light).font(.system(.subheadline)).foregroundStyle(Color.secondary).multilineTextAlignment(.leading)
                 Spacer()
             }
             .padding(7)
             .padding([.top], 10)
-            .frame(minWidth: 230, maxWidth: 230, minHeight: 175, maxHeight: 175, alignment: .leading)
+            .frame(width: 200, height: 150, alignment: .leading)
             .background(self.collection.getCardColor())
             .clipShape(RoundedRectangle(cornerRadius: 5))
-            .innerShadow(shape: RoundedRectangle(cornerRadius: 5), color: .white, lineWidth: 7)
+            .innerShadow(shape: RoundedRectangle(cornerRadius: 5), color: .gray, lineWidth: 2)
         }
     }
 }
@@ -34,7 +34,7 @@ struct HomePageView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("My Collections").font(.system(size: 20))
+                Text("My Collections").font(.system(.title2))
                 Spacer()
                 Button {
                     
@@ -54,7 +54,7 @@ struct HomePageView: View {
             .padding(.bottom, 10)
             
             Divider()
-            Text("Favorites").font(.system(size: 20))
+            Text("Favorites").font(.system(.title2))
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(appState.favoriteCollections, id: \.id) { collection in
@@ -65,7 +65,7 @@ struct HomePageView: View {
             .padding(.bottom, 10)
             
             Divider()
-            Text("Recently").font(.system(size: 20))
+            Text("Recently").font(.system(.title2))
             Spacer()
         }
         .navigationTitle("Welcome!")
@@ -88,5 +88,5 @@ struct HomePageView: View {
 }
 
 #Preview {
-    HomePageView()
+    HomePageView().environmentObject(GlobalAppState.appStateForPreview())
 }

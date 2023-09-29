@@ -7,7 +7,13 @@
 
 import Foundation
 
-enum AnswerStatus {
+
+struct AnswerStatus {
+    var isFrozen: Bool
+    var correctness: Correctness
+}
+
+enum Correctness {
     case correct
     case partialCorrect
     case skipped

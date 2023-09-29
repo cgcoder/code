@@ -15,7 +15,7 @@ struct FlashCardQuestionView: View {
     
     var body: some View {
         ZStack(alignment: .top) {
-            Text("1/10").frame(maxWidth: .infinity, alignment: .trailing).padding(5).font(.footnote)
+            Text("\(appState.currentQuestionIndex + 1) / \(appState.currentContent!.questions.count)").frame(maxWidth: .infinity, alignment: .trailing).padding(5).font(.footnote)
             VStack(alignment: .leading) {
                 QuestionPart(question: appState.currentQuestion, answerView: answerView).padding(2)
                 if appState.currentQuestion.choices.showOptions() || answerView {
@@ -26,22 +26,22 @@ struct FlashCardQuestionView: View {
                     HStack {
                         Spacer()
                         Button() {
-                            appState.userSelectedAnswerStatus = .correct
+                            appState.userSelectedAnswerStatus = AnswerStatus(isFrozen: false, correctness: .correct)
                         } label: {
                             Image(systemName: "hand.thumbsup")
                         }
                         .padding(15)
                         .foregroundColor(.white)
-                        .buttonStyle(NeumorphicButtonStyle(bgColor: appState.userSelectedAnswerStatus == .correct ? .green : .gray))
+                        .buttonStyle(NeumorphicButtonStyle(bgColor: appState.userSelectedAnswerStatus.correctness == .correct ? .green : .gray))
                         Spacer()
                         Button() {
-                            appState.userSelectedAnswerStatus = .wrong
+                            appState.userSelectedAnswerStatus = AnswerStatus(isFrozen: false, correctness: .wrong)
                         } label: {
                             Image(systemName: "hand.thumbsdown")
                         }
                         .padding(15)
                         .foregroundColor(.white)
-                        .buttonStyle(NeumorphicButtonStyle(bgColor: appState.userSelectedAnswerStatus == .wrong ? .red : .gray))
+                        .buttonStyle(NeumorphicButtonStyle(bgColor: appState.userSelectedAnswerStatus.correctness == .wrong ? .red : .gray))
                         Spacer()
                     }
                 }

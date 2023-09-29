@@ -1,7 +1,7 @@
 {
     "collections": [
         {
-            "name": "Guess The Flag",
+            "name": "Guess The Flag with a really really really long text and tiles",
             "id": "00000000-1f0f-49bc-956c-f457a017c74e",
             "description": "Guess the countries flag",
             "cardColorName": {"predefined": {"name": "CardColor5" }},

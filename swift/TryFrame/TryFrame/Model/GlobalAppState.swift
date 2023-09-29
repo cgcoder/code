@@ -34,7 +34,7 @@ class GlobalAppState: ObservableObject {
     @Published var wasAnswerRevealed: Bool = false
     @Published var collectionStatus: ProgressStatus = .notStarted
     @Published var answerState: Dictionary<UInt64, AnswerStatus> = [:]
-    @Published var userSelectedAnswerStatus: AnswerStatus = .skipped // user selected status only for text only questions
+    @Published var userSelectedAnswerStatus: AnswerStatus = AnswerStatus(isFrozen: false, correctness: .skipped) // user selected status only for text only questions
     @Published var navigationPath: NavigationPath = NavigationPath()
     @Published var contentMode: ContentMode = .ordered
     @Published var favorites: Set<Favorites> = []
@@ -62,19 +62,19 @@ class GlobalAppState: ObservableObject {
     
     var wronglyAnsweredCount: Int {
         return self.answerState.filter { state in
-            return self.currentContent!.questions.contains(where: {$0.id == state.key}) && (state.value == .wrong || state.value == .partialCorrect)
+            return self.currentContent!.questions.contains(where: {$0.id == state.key}) && (state.value.correctness == .wrong || state.value.correctness == .partialCorrect)
         }.count
     }
     
     var correctlyAnsweredCount: Int {
         return self.answerState.filter { state in
-            return self.currentContent!.questions.contains(where: {$0.id == state.key}) && state.value == .correct
+            return self.currentContent!.questions.contains(where: {$0.id == state.key}) && state.value.correctness == .correct
         }.count
     }
     
     var unAnsweredCount: Int {
         return self.answerState.filter { state in
-            return self.currentContent!.questions.contains(where: {$0.id == state.key}) && state.value == .skipped
+            return self.currentContent!.questions.contains(where: {$0.id == state.key}) && state.value.correctness == .skipped
         }.count
     }
     
@@ -99,7 +99,7 @@ class GlobalAppState: ObservableObject {
         self.collectionStatus = .progress
         self.selectedAnswers.removeAll()
         self.answerState.removeAll()
-        self.userSelectedAnswerStatus = .skipped
+        self.userSelectedAnswerStatus = AnswerStatus(isFrozen: false, correctness: .correct)
     }
     
     func startCollection(contentMode: ContentMode) -> Void {
@@ -108,14 +108,14 @@ class GlobalAppState: ObservableObject {
             reviewContent = FlipCardCollectionContent(
                 collectionId: self.currentContent!.collectionId,
                 questions: self.currentContent!.questions.filter({
-                    self.answerState[$0.id] != .correct
+                    self.answerState[$0.id]?.correctness != .correct
                 }))
         }
         else if contentMode == .review {
             reviewContent = FlipCardCollectionContent(
                 collectionId: self.currentContent!.collectionId,
                 questions: self.currentContent!.questions.filter({
-                    self.answerState[$0.id] != .correct
+                    self.answerState[$0.id]?.correctness != .correct
                 }))
         }
         
@@ -209,38 +209,40 @@ class GlobalAppState: ObservableObject {
     func prevQuestion() -> Void {
         resetStateForNext()
         nextQuestionMode = .up
-        if (self.currentQuestionIndex > 1) {
+        if (self.currentQuestionIndex >= 1) {
             self.currentQuestionIndex = (self.currentQuestionIndex - 1)
         }
     }
     
     func recordAnswer() -> Void {
-        guard self.answerState.index(forKey: self.currentQuestion.id) == nil else { return }
+        if self.answerState.index(forKey: self.currentQuestion.id) == nil {
+            self.answerState[self.currentQuestion.id] = AnswerStatus(isFrozen: false, correctness: .skipped)
+        }
+        
+        guard !self.answerState[self.currentQuestion.id]!.isFrozen else { return }
+        
+        self.answerState[self.currentQuestion.id]!.isFrozen = self.wasAnswerRevealed
         
         // for text only questions, user needs to tell us if they guessed the answer correctly or not
         if self.currentQuestion.choices.getTextChoice() != nil {
             let questionId = self.currentQuestion.id
             self.answerState[questionId] = self.userSelectedAnswerStatus
-            self.userSelectedAnswerStatus = .skipped
+            self.userSelectedAnswerStatus = AnswerStatus(isFrozen: false, correctness: .skipped)
             return
         }
         
-            
         let questionId = self.currentQuestion.id
-        var result: AnswerStatus = .skipped
-        
-        if self.currentQuestion.isOnlyQuestion() && !self.wasAnswerRevealed {
-            result = .skipped
-        }
+        var result: AnswerStatus = AnswerStatus(isFrozen: false, correctness: .skipped)
+
         let selectedOptions = self.selectedAnswers[self.currentQuestion.id] ?? []
         if self.currentQuestion.isCorrectlyAnswered(selectedIds: selectedOptions) {
-            result = .correct
+            result.correctness = .correct
         }
         else if !self.isAnyChoiceSelected() {
-            result = .skipped
+            result.correctness = .skipped
         }
         else {
-            result = .wrong
+            result.correctness = .wrong
         }
         
         self.answerState[questionId] = result
@@ -264,7 +266,10 @@ class GlobalAppState: ObservableObject {
     }
     
     func isAnyChoiceSelected() -> Bool {
-        self.selectedAnswers.count != 0
+        if let count = self.selectedAnswers[self.currentQuestion.id]?.count {
+            return count > 0
+        }
+        return false
     }
     
     func isFavorite(_ collectionId: UUID) -> Bool {

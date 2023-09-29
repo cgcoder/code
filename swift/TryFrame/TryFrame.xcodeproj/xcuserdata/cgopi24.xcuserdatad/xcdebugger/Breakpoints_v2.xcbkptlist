@@ -219,8 +219,8 @@
             filePath = "TryFrame/Model/GlobalAppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "392"
-            endingLineNumber = "392"
+            startingLineNumber = "397"
+            endingLineNumber = "397"
             landmarkName = "isCorrectlyAnswered(selectedIds:)"
             landmarkType = "7">
             <Locations>
@@ -282,8 +282,8 @@
             filePath = "TryFrame/Model/GlobalAppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "393"
-            endingLineNumber = "393"
+            startingLineNumber = "398"
+            endingLineNumber = "398"
             landmarkName = "isCorrectlyAnswered(selectedIds:)"
             landmarkType = "7">
             <Locations>
@@ -535,8 +535,8 @@
             filePath = "TryFrame/Model/GlobalAppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
             landmarkName = "recordAnswer()"
             landmarkType = "7">
          </BreakpointContent>

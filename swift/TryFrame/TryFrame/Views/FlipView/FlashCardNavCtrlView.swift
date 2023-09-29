@@ -23,7 +23,7 @@ struct FlashCardNavCtrlView: View {
             }
             .padding(15)
             .foregroundColor(.white)
-            .buttonStyle(NeumorphicButtonStyle(bgColor: .orange))
+            .buttonStyle(NeumorphicButtonStyle(bgColor: appState.currentQuestionIndex == 0 ? .gray : .orange))
             .disabled(appState.currentQuestionIndex == 0)
             
             Spacer()
