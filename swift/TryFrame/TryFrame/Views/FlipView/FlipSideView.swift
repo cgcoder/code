@@ -29,8 +29,8 @@ struct FlipSideView<ContentView: View>: FlippableView {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding([.top], 10)
-            .padding([.trailing, .leading], 20)
-            .innerShadow(shape: RoundedRectangle(cornerRadius: 35), color: Color("CardBorderColor"), lineWidth: 20)
+            .padding([.trailing, .leading], 10)
+            .innerShadow(shape: RoundedRectangle(cornerRadius: 35), color: Color("CardBorderColor"), lineWidth: 3)
         }
     }
 }

@@ -15,40 +15,47 @@ struct FlashCardQuestionView: View {
     
     var body: some View {
         ZStack(alignment: .top) {
-            Text("\(appState.currentQuestionIndex + 1) / \(appState.currentContent!.questions.count)").frame(maxWidth: .infinity, alignment: .trailing).padding(5).font(.footnote)
-            VStack(alignment: .leading) {
-                QuestionPart(question: appState.currentQuestion, answerView: answerView).padding(2)
-                if appState.currentQuestion.choices.showOptions() || answerView {
-                    ChoicesView(question: appState.currentQuestion, answerView: answerView).padding(2)
-                }
-                
-                if (answerView && appState.currentQuestion.choices.getTextChoice() != nil) {
-                    HStack {
-                        Spacer()
-                        Button() {
-                            appState.userSelectedAnswerStatus = AnswerStatus(isFrozen: false, correctness: .correct)
-                        } label: {
-                            Image(systemName: "hand.thumbsup")
+            Text("\(appState.currentQuestionIndex + 1) / \(appState.currentContent!.questions.count)").frame(maxWidth: .infinity, alignment: .trailing).padding(5).font(.caption)
+            GeometryReader { proxy in
+                VStack(alignment: .leading) {
+                    QuestionPart(question: appState.currentQuestion, answerView: answerView)
+                        .padding(2)
+                        .padding(.top, 10)
+                        .padding(.bottom, 10)
+                    if appState.currentQuestion.choices.showOptions() || answerView {
+                        HStack(alignment: .bottom) {
+                            ChoicesView(question: appState.currentQuestion, answerView: answerView)
                         }
-                        .padding(15)
-                        .foregroundColor(.white)
-                        .buttonStyle(NeumorphicButtonStyle(bgColor: appState.userSelectedAnswerStatus.correctness == .correct ? .green : .gray))
-                        Spacer()
-                        Button() {
-                            appState.userSelectedAnswerStatus = AnswerStatus(isFrozen: false, correctness: .wrong)
-                        } label: {
-                            Image(systemName: "hand.thumbsdown")
-                        }
-                        .padding(15)
-                        .foregroundColor(.white)
-                        .buttonStyle(NeumorphicButtonStyle(bgColor: appState.userSelectedAnswerStatus.correctness == .wrong ? .red : .gray))
-                        Spacer()
+                        .frame(maxHeight: .infinity)
                     }
+                    
+                    if (answerView && appState.currentQuestion.choices.getTextChoice() != nil) {
+                        HStack {
+                            Spacer()
+                            Button() {
+                                appState.userSelectedAnswerStatus = AnswerStatus(isFrozen: false, correctness: .correct)
+                            } label: {
+                                Image(systemName: "hand.thumbsup")
+                            }
+                            .padding(15)
+                            .foregroundColor(.white)
+                            .buttonStyle(NeumorphicButtonStyle(bgColor: appState.userSelectedAnswerStatus.correctness == .correct ? .green : .gray))
+                            Spacer()
+                            Button() {
+                                appState.userSelectedAnswerStatus = AnswerStatus(isFrozen: false, correctness: .wrong)
+                            } label: {
+                                Image(systemName: "hand.thumbsdown")
+                            }
+                            .padding(15)
+                            .foregroundColor(.white)
+                            .buttonStyle(NeumorphicButtonStyle(bgColor: appState.userSelectedAnswerStatus.correctness == .wrong ? .red : .gray))
+                            Spacer()
+                        }
+                    }
+                    FlashCardNavCtrlView(answerView: answerView, flipMethod: flipMethod)
                 }
-                
-                FlashCardNavCtrlView(answerView: answerView, flipMethod: flipMethod)
             }
-            .padding([.top, .bottom])
+            .padding([.top])
         }
     }
 }
@@ -59,31 +66,32 @@ struct QuestionPart: View {
     @EnvironmentObject var appState: GlobalAppState
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .center) {
             GeometryReader { geometry in
                 ScrollView(.vertical) {
-                    VStack(alignment: .center) {
-                        Text(question.text)
+                    VStack {
+                        Text(question.text.toMarkdown())
+                            .lineLimit(nil)
                             .font(.system(size: CGFloat(question.fontSize.getFontSize())))
+                            .fixedSize(horizontal: false, vertical: true)
                             .foregroundColor(.primary)
-                        if let image = question.imageUrl {
-                            AsyncImage(
-                                url: URL(string: image),
-                                content: { image in
-                                    image.resizable()
-                                         .aspectRatio(contentMode: .fit)
-                                         .frame(maxWidth: 300, maxHeight: 100)
-                                },
-                                placeholder: {
-                                    ProgressView()
-                                }
-                            )
-                            .frame(width: 200, height: 120)
-                        }
+                    }.frame(maxWidth: .infinity, alignment: .center)
+                    if let image = question.imageUrl {
+                        AsyncImage(
+                            url: URL(string: image),
+                            content: { image in
+                                image.resizable()
+                                     .aspectRatio(contentMode: .fit)
+                                     .frame(maxWidth: 300, maxHeight: 100)
+                            },
+                            placeholder: {
+                                ProgressView()
+                            }
+                        )
+                        .frame(width: 200, height: 120)
                     }
-                    .frame(width: geometry.size.width)
-                    .frame(minHeight: geometry.size.height)
                 }
+                .frame(minHeight: geometry.size.height)
             }
         }
     }
@@ -103,7 +111,6 @@ struct ChoicesView: View {
                             .font(.system(size: CGFloat(question.fontSize.getFontSize())))
                     }
                     .frame(width: reader.size.width)
-                    .frame(minHeight: reader.size.height)
                 }
                 else if let singleChoice = question.choices.getSingleChoices() {
                     VStack(alignment: .leading) {
@@ -132,6 +139,7 @@ struct ChoicesView: View {
                     }
                 }
             }
+            .frame(maxHeight: .infinity)
         }
     }
 }

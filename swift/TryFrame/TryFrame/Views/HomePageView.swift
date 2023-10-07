@@ -36,8 +36,16 @@ struct HomePageView: View {
             HStack {
                 Text("My Collections").font(.system(.title2))
                 Spacer()
-                Button {
-                    
+                Menu {
+                    Button("Import") {
+                        
+                    }
+                    Button("New Group") {
+                        
+                    }
+                    Button("Search") {
+                        
+                    }
                 }
                 label: {
                     Image(systemName: "plus")
@@ -51,7 +59,7 @@ struct HomePageView: View {
                     }
                 }
             }
-            .padding(.bottom, 10)
+            .padding(.bottom)
             
             Divider()
             Text("Favorites").font(.system(.title2))
@@ -62,10 +70,18 @@ struct HomePageView: View {
                     }
                 }
             }
-            .padding(.bottom, 10)
+            .padding(.bottom)
             
             Divider()
             Text("Recently").font(.system(.title2))
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach(appState.recentlyUsedCollections, id: \.id) { collection in
+                        Tile(collection: collection).padding([.leading], 5)
+                    }
+                }
+            }
+            .padding(.bottom)
             Spacer()
         }
         .navigationTitle("Welcome!")
@@ -85,6 +101,20 @@ struct HomePageView: View {
             appState.initialize()
         }
     }
+}
+
+struct MenuView: View {
+    var body: some View {
+        Menu("Options") {
+            Button("Order Now", action: placeOrder)
+            Button("Adjust Order", action: adjustOrder)
+            Button("Cancel", action: cancelOrder)
+        }
+    }
+
+    func placeOrder() { }
+    func adjustOrder() { }
+    func cancelOrder() { }
 }
 
 #Preview {

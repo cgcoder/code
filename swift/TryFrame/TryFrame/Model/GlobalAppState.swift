@@ -38,12 +38,12 @@ class GlobalAppState: ObservableObject {
     @Published var navigationPath: NavigationPath = NavigationPath()
     @Published var contentMode: ContentMode = .ordered
     @Published var favorites: Set<Favorites> = []
+    @Published var recentlyUsed: [RecentlyUsed] = []
     
     var initialized: Bool = false
     let dataContainer = NSPersistentContainer(name: "Model")
     
     var currentContent: FlipCardCollectionContent? {
-        print("\(self.contentMode)")
         switch self.contentMode {
         case .shuffled:
             return self.shuffledContent
@@ -84,12 +84,20 @@ class GlobalAppState: ObservableObject {
         }
     }
     
+    var recentlyUsedCollections: [FlipCardCollection] {
+        return self.recentlyUsed.map({ (ru: RecentlyUsed) -> FlipCardCollection? in
+            let c = ru.collectionId!
+            return flipcardCollections.first(where: { $0.id == c})
+        }).filter({ $0 != nil }).map( {$0!})
+    }
+    
     func initialize() -> Void {
         guard !initialized else { return }
         
         self.loadPredefinedCollection()
         self.loadDataFromCoreData()
         self.loadFavorites(context: self.dataContainer.viewContext)
+        self.loadRecentlyUsed(context: self.dataContainer.viewContext)
         self.initialized = true
     }
     
@@ -130,12 +138,21 @@ class GlobalAppState: ObservableObject {
                 self.answerState.removeValue(forKey: q.id)
             }
         }
+        
+        self.addToRecentlyUsed(context: self.dataContainer.viewContext, collectionId: self.currentContent!.collectionId)
     }
     
     func resetContent() {
         self.openedContent = nil
         self.shuffledContent = nil
         self.reviewContent = nil
+    }
+    
+    func endCollection() {
+        // fake simulate next question actions
+        while (self.currentQuestionIndex <= currentContent!.questions.count-1 && self.collectionStatus != .complete) {
+            self.nextQuestion()
+        }
     }
     
     func loadPredefinedCollection() -> Void {
@@ -275,6 +292,11 @@ class GlobalAppState: ObservableObject {
     func isFavorite(_ collectionId: UUID) -> Bool {
         let favorite = self.favorites.first(where: { $0.collectionId == collectionId })
         return favorite != nil
+    }
+    
+    func isRecentlyUsed(_ collectionId: UUID) -> Bool {
+        let r = self.recentlyUsed.first(where: { $0.collectionId == collectionId })
+        return r != nil
     }
     
     private func loadFlipCardCollectionInBuilt(collectionId: UUID) -> Void {

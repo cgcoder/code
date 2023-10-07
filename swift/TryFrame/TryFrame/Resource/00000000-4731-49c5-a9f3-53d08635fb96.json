@@ -1,0 +1,145 @@
+{
+    "collectionId": "00000000-63a6-4f72-a3e7-92d94f8ea270",
+    "questions": [{
+            "id": 1,
+            "text": "What will be the output of the following program?\n\n```swift\nstruct Student {\n    var name: Int\n}\n\nlet s = Student(name: \"Einstein\")\ns.name = \"Newton\"\nprint(s.name)\n```\nWhat will be the output of the following program?\n\n```swift\nstruct Student {\n    var name: Int\n}\n\nlet s = Student(name: \"Einstein\")\ns.name = \"Newton\"\nprint(s.name)\n```\nWhat will be the output of the following program?\n\n```swift\nstruct Student {\n    var name: Int\n}\n\nlet s = Student(name: \"Einstein\")\ns.name = \"Newton\"\nprint(s.name)\n```\nWhat will be the output of the following program?\n\n```swift\nstruct Student {\n    var name: Int\n}\n\nlet s = Student(name: \"Einstein\")\ns.name = \"Newton\"\nprint(s.name)\n```\n Test\n Test2\n Test3",
+            "fontSize": "md",
+            "cardColorName": {"predefined": {"name": "CardColor1"} },
+            "choices": {
+                "single": {
+                    "options": [{
+                            "choiceId": 1,
+                            "content": {
+                                "text": {
+                                    "text": "Newton",
+                                    "correct": false
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 2,
+                            "content": {
+                                "text": {
+                                    "text": "Einstein",
+                                    "correct": false
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 3,
+                            "content": {
+                                "text": {
+                                    "text": "Compiler error",
+                                    "correct": true
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 4,
+                            "content": {
+                                "text": {
+                                    "text": "None of the above",
+                                    "correct": false
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": 2,
+            "text": "Which of the following cities are in United State of America? (pick 2)",
+            "fontSize": "md",
+            "cardColorName": {"predefined": {"name": "CardColor2"} },
+            "choices": {
+                "multi": {
+                    "options": [{
+                            "choiceId": 1,
+                            "content": {
+                                "text": {
+                                    "text": "Moscow",
+                                    "correct": false
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 2,
+                            "content": {
+                                "text": {
+                                    "text": "New York",
+                                    "correct": true
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 3,
+                            "content": {
+                                "text": {
+                                    "text": "Boston",
+                                    "correct": true
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 4,
+                            "content": {
+                                "text": {
+                                    "text": "Bangalore",
+                                    "correct": false
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": 3,
+            "text": "Which of the following unit do you use to measure length? (pick 3)",
+            "fontSize": "md",
+            "cardColorName": {"predefined": {"name": "CardColor3"} },
+            "choices": {
+                "multi": {
+                    "options": [{
+                            "choiceId": 1,
+                            "content": {
+                                "text": {
+                                    "text": "Feet",
+                                    "correct": true
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 2,
+                            "content": {
+                                "text": {
+                                    "text": "Meters",
+                                    "correct": true
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 3,
+                            "content": {
+                                "text": {
+                                    "text": "Centimeters",
+                                    "correct": true
+                                }
+                            }
+                        },
+                        {
+                            "choiceId": 4,
+                            "content": {
+                                "text": {
+                                    "text": "Pounds",
+                                    "correct": false
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

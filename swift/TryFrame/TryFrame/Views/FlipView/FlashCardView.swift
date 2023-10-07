@@ -13,6 +13,7 @@ struct FlashCardView: View {
     var backgroundColor: Color?
     
     var body: some View {
+        let _ = Self._printChanges()
         ZStack {
             TwoSidedFlipView(
                 frontView: FlipSideView(contentView: FlashCardQuestionView(flipMethod: flip), isFront: true, bgColor: backgroundColor ?? .gray, flipViewState: state),

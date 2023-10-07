@@ -46,7 +46,7 @@ struct CompletedCollectionView: View {
                            Image(systemName: "homekit").foregroundStyle(.white)
                             .imageScale(.large)
                         }
-                        .buttonStyle(NeumorphicButtonStyle(bgColor: .green))
+                        .buttonStyle(RoundedRectButtonStyle(bgColor: .green))
                     Spacer()
                     Button {
                         appState.restartCollection()
@@ -77,8 +77,8 @@ struct CompletedCollectionView: View {
         }
         .padding()
         .navigationTitle(appState.currentFlipcardCollection!.name)
+        .navigationBarTitleDisplayMode(.inline)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(appState.currentFlipcardCollection!.getCardColor())
         .onAppear {
             withAnimation(.spring(duration: 1)) {
                 self.opacity = 1.0
@@ -130,6 +130,27 @@ struct NeumorphicButtonStyle: ButtonStyle {
                         .shadow(color: .black, radius: configuration.isPressed ? 2: 4, x: configuration.isPressed ? 1: 5, y: configuration.isPressed ? 1: 5)
                         .blendMode(.overlay)
                     Circle()
+                        .fill(bgColor)
+                }
+        )
+        .scaleEffect(configuration.isPressed ? 0.95: 1)
+        .foregroundColor(.primary)
+        .animation(.spring(duration: 0.25), value: configuration.isPressed)
+    }
+}
+
+struct RoundedRectButtonStyle: ButtonStyle {
+    var bgColor: Color
+
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .padding()
+            .background(
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .shadow(color: .black, radius: configuration.isPressed ? 0: 5, x: configuration.isPressed ? 0: 5, y: configuration.isPressed ? 0: 5)
+                        .blendMode(.overlay)
+                    RoundedRectangle(cornerRadius: 10)
                         .fill(bgColor)
                 }
         )

@@ -5,49 +5,64 @@
             "id": "00000000-1f0f-49bc-956c-f457a017c74e",
             "description": "Guess the countries flag",
             "cardColorName": {"predefined": {"name": "CardColor5" }},
-            "isBuiltIn": true
+            "isBuiltIn": true,
+            "isFlashCard": false
+        },
+        {
+            "name": "Swift - Basic 1",
+            "id": "00000000-4731-49c5-a9f3-53d08635fb96",
+            "description": "Check your swift understanding with some basic questions.",
+            "cardColorName": {"predefined": {"name": "CardColor3" }},
+            "isBuiltIn": true,
+            "isFlashCard": false
         },
         {
             "name": "Guess the Country",
             "id": "00000000-f4d5-4c68-8ccf-cf632c5ae184",
             "description": "Guess the Country for the flag",
             "cardColorName": {"predefined": {"name": "CardColor6" }},
-            "isBuiltIn": true
+            "isBuiltIn": true,
+            "isFlashCard": false
         },
         {
             "name": "Multiplication Level 1",
             "id": "00000000-4b85-4910-b3a5-99f61640afda",
             "description": "Single Digit Multiplication from 1 to 5",
             "cardColorName": {"predefined": {"name": "CardColor1" }},
-            "isBuiltIn": true
+            "isBuiltIn": true,
+            "isFlashCard": true
         },
         {
             "name": "Multiplication Level 2",
             "id": "00000000-af40-4b33-b8a8-85d3455a4d43",
             "description": "Single Digit Multiplication from 6 to 12",
             "cardColorName": {"predefined": {"name": "CardColor2"} },
-            "isBuiltIn": true
+            "isBuiltIn": true,
+            "isFlashCard": false
         },
         {
             "name": "Add Multiple of 10s",
             "id": "00000000-5663-4002-83ac-cee5bffcc5da",
             "description": "Quickly add number to multiple of 10s",
             "cardColorName": {"predefined": {"name": "CardColor3"} },
-            "isBuiltIn": true
+            "isBuiltIn": true,
+            "isFlashCard": false
         },
         {
             "name": "Add single digit to double digit",
             "id": "00000000-473c-4629-887a-27535f1d0521",
             "description": "Practice adding single digit to double digit",
             "cardColorName": {"predefined": {"name": "CardColor4"} },
-            "isBuiltIn": true
+            "isBuiltIn": true,
+            "isFlashCard": false
         },
         {
             "name": "Trivia - Level 1",
             "id": "00000000-63a6-4f72-a3e7-92d94f8ea270",
             "description": "Trivia questions to get you warm up.",
             "cardColorName": {"predefined": {"name": "CardColor8"} },
-            "isBuiltIn": true
+            "isBuiltIn": true,
+            "isFlashCard": false
         }
     ]
 }

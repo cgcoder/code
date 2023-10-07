@@ -13,7 +13,8 @@ class SwipeState: ObservableObject {
 
 struct SwipeView: View {
     @EnvironmentObject var appState: GlobalAppState
-
+    @State var isShowingEndConfirmation: Bool = false
+    
     var body: some View {
         ZStack {
             if (appState.collectionStatus == .progress) {
@@ -30,6 +31,7 @@ struct SwipeView: View {
             }
         }
         .navigationTitle(appState.currentFlipcardCollection!.name)
+        .navigationBarBackButtonHidden()
         .navigationBarTitleDisplayMode(.inline)
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         .onSwipeUpGesture { direction in
@@ -40,6 +42,16 @@ struct SwipeView: View {
                 else if (direction == .down) {
                     appState.prevQuestion()
                 }
+            }
+        }
+        .toolbar {
+            Button("End") {
+                self.isShowingEndConfirmation = true
+            }
+        }
+        .confirmationDialog("Are you sure?", isPresented: $isShowingEndConfirmation) {
+            Button("Yes, End!", role: .destructive) {
+                appState.endCollection()
             }
         }
     }

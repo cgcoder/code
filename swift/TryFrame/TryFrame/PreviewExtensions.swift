@@ -30,7 +30,7 @@ extension FlipCardCollection {
             name: "A Sample flip card collection",
             id: UUID(uuidString: "7184ff79-8f91-4dd5-982f-7d005cc703f5")!,
             description: "A flip card collection with a really long text line that you can use.",
-            cardColorName: .predefined(name: "CardColor2"))
+            cardColorName: .predefined(name: "CardColor2"), isFlashCard: false)
     }
 }
 
@@ -65,7 +65,7 @@ extension GlobalAppState {
     
     static func sampleMultiChoices(collectionId: UUID) -> FlipCardCollectionContent {
         var questions: [FlipCardQuestion] = []
-        questions.append(FlipCardQuestion(id: 1, text: "(1) What is the capital of India?", fontSize: .lg, choices: .multi(options: cityChoicesMulti())))
+        questions.append(FlipCardQuestion(id: 1, text: "(1) What is the **capital** of India?", fontSize: .lg, choices: .multi(options: cityChoicesMulti())))
         questions.append(FlipCardQuestion(id: 2, text: "(2) What is the capital of India?", fontSize: .lg, choices: .multi(options: cityChoices())))
         questions.append(FlipCardQuestion(id: 3, text: "(3) What is the capital of India?", fontSize: .lg, choices: .single(options: cityChoices())))
         return FlipCardCollectionContent(collectionId: collectionId, questions: questions)

@@ -30,8 +30,8 @@
             filePath = "TryFrame/DataModel/FlipCardCollection.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "getCardColor()"
             landmarkType = "7">
             <Locations>
@@ -171,8 +171,8 @@
             filePath = "TryFrame/Views/FlipView/FlashCardQuestionView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -219,8 +219,8 @@
             filePath = "TryFrame/Model/GlobalAppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "397"
-            endingLineNumber = "397"
+            startingLineNumber = "419"
+            endingLineNumber = "419"
             landmarkName = "isCorrectlyAnswered(selectedIds:)"
             landmarkType = "7">
             <Locations>
@@ -282,8 +282,8 @@
             filePath = "TryFrame/Model/GlobalAppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "398"
-            endingLineNumber = "398"
+            startingLineNumber = "420"
+            endingLineNumber = "420"
             landmarkName = "isCorrectlyAnswered(selectedIds:)"
             landmarkType = "7">
             <Locations>
@@ -375,8 +375,8 @@
             filePath = "TryFrame/Model/GlobalAppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "startCollection(contentMode:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -407,8 +407,8 @@
             filePath = "TryFrame/DataModel/FlipCardCollection.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "shuffle(shuffle:content:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -423,8 +423,8 @@
             filePath = "TryFrame/DataModel/FlipCardCollection.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "shuffle(shuffle:content:)"
             landmarkType = "7">
             <Locations>
@@ -471,8 +471,8 @@
             filePath = "TryFrame/DataModel/FlipCardCollection.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "shuffle(shuffle:content:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -535,8 +535,8 @@
             filePath = "TryFrame/Model/GlobalAppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
             landmarkName = "recordAnswer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -551,26 +551,121 @@
             filePath = "TryFrame/Model/GlobalAppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
             landmarkName = "recordAnswer()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EB2F0727-0137-460E-9ABE-250C967DE655 - c935b9c4a3563a08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.recordAnswer() -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "234"
+                  endingLineNumber = "234"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "EB2F0727-0137-460E-9ABE-250C967DE655 - c935b9c4a3563a2f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.recordAnswer() -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/GlobalAppState.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "235"
+                  endingLineNumber = "235"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8B160A4C-390B-4EFB-BD3D-6FDD198A106E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TryFrame/Model/GlobalAppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "startCollection(contentMode:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5D0AA12B-246D-488B-983C-E735A13ECB04"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TryFrame/Model/AppData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "addToRecentlyUsed(context:collectionId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5D0AA12B-246D-488B-983C-E735A13ECB04 - cdf25cfc3035da6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.addToRecentlyUsed(context: __C.NSManagedObjectContext, collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/AppData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  uuid = "5D0AA12B-246D-488B-983C-E735A13ECB04 - cdf25cfc3035da6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.addToRecentlyUsed(context: __C.NSManagedObjectContext, collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/AppData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "352">
+               </Location>
+               <Location
+                  uuid = "5D0AA12B-246D-488B-983C-E735A13ECB04 - cdf25cfc3035da6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TryFrame.GlobalAppState.addToRecentlyUsed(context: __C.NSManagedObjectContext, collectionId: Foundation.UUID) -&gt; ()"
+                  moduleName = "TryFrame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/extn-mac/cgcoder/code/swift/TryFrame/TryFrame/Model/AppData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "484">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -44,10 +44,10 @@
          contextName = "GlobalAppState.recordAnswer():GlobalAppState.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.answerState">
+               value = "self.selectedAnswers">
             </PersistentString>
             <PersistentString
-               value = "self.selectedAnswers">
+               value = "self.answerState">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -89,6 +89,14 @@
             </PersistentString>
             <PersistentString
                value = "self.answerState">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GlobalAppState.addToRecentlyUsed(context:collectionId:):AppData.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.recentlyUsed[2]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -17,7 +17,6 @@ struct FlashCardCollectionView: View {
     
     var body: some View {
         ZStack {
-            (appState.currentFlipcardCollection?.getCardColor() ?? Color.gray).ignoresSafeArea()
             if appState.collectionPageLoadStatus == .done {
                 FlashCardCollectionViewBody(reviewMode: reviewMode)
             }
@@ -34,15 +33,27 @@ struct FlashCardCollectionView: View {
             }
         }
         .navigationTitle("\(appState.currentFlipcardCollection?.name ?? "")\(reviewMode ? " - Review" : "")")
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             Button {
-                appState.updateFavorite(context: managedContext, collectionId: appState.currentFlipcardCollection!.id)
+                withAnimation(.spring().repeatCount(1, autoreverses: true)) {
+                    appState.updateFavorite(context: managedContext, collectionId: appState.currentFlipcardCollection!.id)
+                }
             } label: {
-                Image(systemName: self.appState.isFavorite(self.appState.currentFlipcardCollection?.id ?? UUID()) ? "heart.fill" : "heart").foregroundColor(.white)
+                Image(systemName: self.appState.isFavorited ? "heart.fill" : "heart")
+                    .foregroundColor(self.appState.isFavorited ? .red : .white)
+                    .scaleEffect(self.appState.isFavorited ? 1.1 : 1.2)
             }
         }
     }
 }
+
+extension GlobalAppState {
+    var isFavorited: Bool {
+        return self.isFavorite(self.currentFlipcardCollection?.id ?? UUID())
+    }
+}
+
 
 struct FlashCardCollectionViewBody: View {
     @EnvironmentObject var appState: GlobalAppState
@@ -51,33 +62,44 @@ struct FlashCardCollectionViewBody: View {
     
     var body: some View {
         VStack {
-            Spacer()
-            Text(appState.currentFlipcardCollection!.description)
-            if reviewMode {
-                Text("Let's review the questions you got wrong last time. Good luck!")
+            VStack {
+                Text(appState.currentFlipcardCollection!.description).padding(20)
+                if reviewMode {
+                    Text("Let's review the questions you got wrong last time. Good luck!")
+                }
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             Spacer()
-            HStack {
-                Spacer()
+            VStack {
                 Button {
                     appState.startCollection(contentMode: reviewMode ? .review : .ordered)
                     appState.navigationPath.append(appState.currentContent!)
                 } label: {
-                    Image(systemName: "play.circle").foregroundStyle(.white)
-                        .imageScale(.large)
+                    Text("Start")
+                        .frame(width: 150)
                 }
-                .buttonStyle(NeumorphicButtonStyle(bgColor: .green))
+                .buttonStyle(RoundedRectButtonStyle(bgColor: Color("MyGreen")))
+                .padding(.bottom, 20)
                 
-                Spacer()
                 Button {
                     appState.startCollection(contentMode: reviewMode ? .shuffledReview : .shuffled)
                     appState.navigationPath.append(appState.currentContent!)
                 } label: {
-                    Image(systemName: "shuffle.circle").foregroundStyle(.white)
-                        .imageScale(.large)
+                    Text("Shuffle & Start").frame(width: 150)
                 }
-                .buttonStyle(NeumorphicButtonStyle(bgColor: .green))
-                Spacer()
+                .buttonStyle(RoundedRectButtonStyle(bgColor: Color("MyGreen")))
+                .padding(.bottom, 20)
+                
+                if !appState.currentFlipcardCollection!.isFlashCard {
+                    Button {
+                        appState.startCollection(contentMode: reviewMode ? .shuffledReview : .shuffled)
+                        appState.navigationPath.append(appState.currentContent!)
+                    } label: {
+                        Text("Start Test").frame(width: 150)
+                    }
+                    .buttonStyle(RoundedRectButtonStyle(bgColor: Color("MyGreen")))
+                    .padding(.bottom, 20)
+                }
             }
             .padding(20)
             .padding([.bottom], 40)

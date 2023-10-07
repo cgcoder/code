@@ -11,7 +11,7 @@ import CoreData
 extension GlobalAppState {
     func loadDataFromCoreData() {
         self.dataContainer.loadPersistentStores { desc, error in
-            if let error = error {
+            if let _ = error {
                 self.dbLoadStatus = .error(message: "Unable to load the data.")
             }
         }
@@ -53,6 +53,42 @@ extension GlobalAppState {
         }
         catch {
             print("error loadfavorites")
+        }
+    }
+    
+    func addToRecentlyUsed(context: NSManagedObjectContext, collectionId: UUID) -> Void {
+        let used = RecentlyUsed(context: context)
+        used.collectionId = collectionId
+        used.timestamp = Date.now
+        
+        for ru in self.recentlyUsed {
+            print("Before remove \(ru.collectionId!.uuidString) \(ru.timestamp?.description), to remove \(collectionId.uuidString)")
+        }
+        
+        let oldEntry = self.recentlyUsed.first(where: { $0.collectionId == collectionId })
+        if let oldEntry = oldEntry {
+            self.recentlyUsed.removeAll(where: { $0.collectionId == collectionId })
+            context.delete(oldEntry)
+        }
+        
+        self.recentlyUsed.insert(used, at: 0)
+        self.save(context)
+        
+        for ru in self.recentlyUsed {
+            print("after remove \(ru.collectionId?.uuidString ?? "empty") \(ru.timestamp?.description), to remove \(collectionId.uuidString)")
+        }
+    }
+    
+    func loadRecentlyUsed(context: NSManagedObjectContext) -> Void {
+        let fetchReq: NSFetchRequest<RecentlyUsed> = RecentlyUsed.fetchRequest()
+        fetchReq.sortDescriptors = [NSSortDescriptor(keyPath: \RecentlyUsed.collectionId, ascending: false)]
+        fetchReq.fetchLimit = 50
+        do {
+            let fetchResult = try context.fetch(fetchReq)
+            self.recentlyUsed = fetchResult
+        }
+        catch {
+            print("error loadRecentlyUsed")
         }
     }
 }

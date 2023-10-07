@@ -38,3 +38,15 @@ extension View {
         }
     }
 }
+
+/// https://stackoverflow.com/questions/68426768/swiftui-text-markdown-dynamic-string-not-working
+extension String {
+  func toMarkdown() -> AttributedString {
+    do {
+        return try AttributedString(markdown: self, options: AttributedString.MarkdownParsingOptions(interpretedSyntax: .inlineOnlyPreservingWhitespace))
+    } catch {
+      print("Error parsing Markdown for string \(self): \(error)")
+      return AttributedString(self)
+    }
+  }
+}

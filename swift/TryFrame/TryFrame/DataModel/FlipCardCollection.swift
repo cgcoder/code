@@ -117,6 +117,7 @@ struct FlipCardCollection: Codable, Hashable {
     var description: String
     var cardColorName: FlipCardColor
     var isBuiltIn: Bool?
+    var isFlashCard: Bool
     
     var hashValue: Int { self.id.hashValue }
     func hash(into hasher: inout Hasher) {
